@@ -1,0 +1,41 @@
+@import '~assets/scss/partials/theme.scss';
+
+.announcement {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+
+  &__content {
+      background: #FFF4E4;
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+  &__description {
+      display: flex;
+      align-items: center ;
+  }
+
+  &__icon {
+    font-size: 24px;
+    padding: 10px 20px 10px 30px;
+    color: #FFA914;
+  }
+
+  &__text {
+    display: inline-block;
+    color: #FFA914;
+  }
+
+  &__anchor{
+      padding: 10px 30px;
+      
+      a{
+          font-size: 13px;
+      }
+  }
+}

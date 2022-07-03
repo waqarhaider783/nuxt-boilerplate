@@ -1,0 +1,30 @@
+@import '~assets/scss/partials/theme.scss';
+
+.serviceCard {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 2rem;
+    @media (max-width: 767px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    & > img {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__title {
+    font-weight: 600;
+    padding: 10px 0;
+  }
+}

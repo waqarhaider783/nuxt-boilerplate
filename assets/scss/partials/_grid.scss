@@ -1,0 +1,123 @@
+/**
+ * @author Ashish Ali <aashish.karowalia@va8ivedigital.com>
+ */
+
+@use 'sass:math';
+
+// @for $i from 1 through $total-grids {
+//   $width: percentage(math.div(1, $i));
+//   .column-#{$i} {
+//     width: $width;
+//   }
+// }
+
+// .rowbar-column {
+//   display: flex;
+//   margin: 0 -15px;
+// }
+
+// [class*='column-'],
+// [class^=' column-'] {
+//   padding: 0 15px;
+// }
+
+// @media (max-width: 1023px) {
+//   .rowbar-column {
+//     flex-direction: column;
+//   }
+//   [class*='column-'],
+//   [class^=' column-'] {
+//     width: 100%;
+
+//     & + & {
+//       margin-top: 20px;
+//     }
+//   }
+// }
+
+@for $i from 1 through $total-grids {
+  $width: percentage(math.div(1, $i));
+
+  .grid-column-#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+[class*='grid-column-'],
+[class^=' grid-column-'] {
+  grid-gap: 30px;
+
+  @media (max-width: 1440px) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    grid-gap: 10px;
+  }
+}
+
+.grid-column-2 {
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.grid-column-3 {
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 521px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.grid-column-4,
+.grid-column-5 {
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 521px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.grid-column-6 {
+  @media (max-width: 1199px) {
+    // grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 521px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.grid-column-8,
+.grid-column-9,
+.grid-column-10,
+.grid-column-11,
+.grid-column-12 {
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (max-width: 521px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

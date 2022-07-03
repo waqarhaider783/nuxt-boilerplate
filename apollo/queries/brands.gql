@@ -1,0 +1,15 @@
+query MyQuery {
+  pages (where: {title: "brand"}) {
+    edges {
+      node {
+        brandStyle2 {
+          brandImageStyle2{
+            sourceUrl
+            altText
+          }
+          paragraphStyle2
+        }
+      }
+    }
+  }
+}

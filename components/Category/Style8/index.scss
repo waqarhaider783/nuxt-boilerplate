@@ -1,0 +1,29 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  border: 1px solid lightgray;
+  height: 100%;
+  @include border-radius(10px);
+
+  figure {
+    position: relative;
+    width: 72px;
+    height: auto;
+    padding-bottom: 72px;
+
+    img {
+      object-fit: contain;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__text {
+    color: var(--secondaryColor);
+    font-weight: 600;
+  }
+}

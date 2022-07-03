@@ -1,0 +1,311 @@
+@import '~/assets/scss/partials/theme.scss';
+.profile {
+  display: flex;
+  gap: 16px;
+  .only-mobile {
+    display: none !important;
+  }
+  .no-mobile {
+    display: flex !important;
+  }
+  &__details {
+    width: 72%;
+    background: var(--whiteTextColor);
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    gap: 5rem;
+    border-radius: 6px;
+    border: 1px solid var(--gray-300);
+    align-items: flex-start;
+    .left {
+      width: fit-content;
+      text-align: center;
+    }
+    .display__picture {
+      border: 5px solid var(--primaryColor);
+      padding: 5px;
+      border-radius: 50%;
+      width: fit-content;
+      height: 195px;
+      width: 195px;
+      position: relative;
+
+      figure {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        padding: 100% 0 0;
+        background-color: transparent;
+        img {
+          position: absolute;
+          border-radius: 50%;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          vertical-align: middle;
+          object-position: center center;
+        }
+      }
+      .actions {
+        background: var(--whiteTextColor);
+        cursor: pointer;
+        padding: 7px;
+        border-radius: 50%;
+        color: var(--gray-400);
+        position: absolute;
+        right: 8%;
+        bottom: 4%;
+        font-size: 20px;
+        color: var(--gray-500);
+      }
+    }
+    .btn {
+      margin: auto;
+      margin-top: 1rem;
+      border-radius: 5px;
+      padding: 4px 10px;
+      text-transform: capitalize;
+      width: fit-content;
+      font-size: 1rem;
+      text-align: center;
+      justify-content: center;
+      color: var(--gray-900);
+      border: 1px solid var(--gray-700);
+      background: var(--whiteTextColor);
+      cursor: pointer;
+      width: 100%;
+      &.min {
+        min-width: 130px;
+      }
+
+      &.primary {
+        background: var(--primaryColor);
+        color: var(--whiteTextColor);
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      gap: 2rem;
+      &__name {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+        color: var(--blackTextColor);
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      &__info {
+        display: flex;
+        gap: 4.5rem;
+
+        .value {
+          font-size: 2.2rem;
+          color: var(--primaryColor);
+        }
+        .title {
+          font-size: 20px;
+          color: var(--blackTextColor);
+        }
+      }
+      .description {
+        font-size: 18px;
+        color: var(--gray-700);
+        line-height: 1.5em;
+        width: 90%;
+        // @include trim(2);
+      }
+    }
+    .options-btn {
+      color: var(--gray-400);
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .options {
+      border: 1px solid var(--gray-300);
+      border-radius: 3px;
+      height: fit-content;
+      width: fit-content;
+      position: absolute;
+      right: 44px;
+      top: 64px;
+      background-color: var(--gray-300);
+      gap: 1px;
+      display: grid;
+      li {
+        padding: 7px 12px;
+        background-color: var(--whiteTextColor);
+        color: var(--gray-700);
+        text-transform: capitalize;
+        transition: 0.2s background ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background: var(--gray-100);
+          transition: 0.2s background ease-in-out;
+        }
+      }
+    }
+  }
+  &__kindness_meter {
+    width: 28%;
+    background: var(--whiteTextColor);
+    border-radius: 6px;
+    border: 1px solid var(--gray-300);
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 100%;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: 1240px) {
+    &__details {
+      padding: 2rem;
+      gap: 3rem;
+      .right {
+        &__info {
+          gap: 2rem;
+          .value {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      .options-btn {
+        right: 25px;
+        top: 25px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    &__details {
+      width: 100%;
+      .right {
+        gap: 1.6rem;
+      }
+    }
+    &__kindness_meter {
+      margin: auto;
+      width: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    &__details {
+      padding: 1.5rem;
+      gap: 2rem;
+      .right {
+        padding-top: 10px;
+        &__name {
+          font-size: 1.3rem;
+        }
+        &__info {
+          gap: 1rem;
+          .value {
+            font-size: 1.5rem;
+          }
+          .title {
+            font-size: 1rem;
+          }
+        }
+        .description {
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+      .display__picture {
+        height: 150px;
+        width: 150px;
+        .actions {
+          right: 6%;
+          font-size: unset;
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .only-mobile {
+      display: flex !important;
+    }
+    .no-mobile {
+      display: none !important;
+    }
+    &__details {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.5rem;
+      .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.2rem;
+        .right__info {
+          text-align: left;
+          .value {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .title {
+            font-size: 14px;
+          }
+        }
+      }
+      .right {
+        gap: 0;
+        height: fit-content;
+        &__name {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+      .options-btn {
+        display: none;
+      }
+      .display__picture {
+        width: 98px;
+        height: 98px;
+        border: 3px solid var(--primaryColor);
+        padding: 3px;
+        .actions {
+          display: none;
+        }
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    &__details {
+      .left {
+        gap: 0.8rem;
+        .right__info {
+          .value {
+            font-size: 18px;
+          }
+          .title {
+            font-size: 12px;
+          }
+        }
+      }
+      .display__picture {
+        height: 85px;
+        width: 85px;
+        border: 2px solid var(--primaryColor);
+        padding: 2px;
+      }
+    }
+  }
+}

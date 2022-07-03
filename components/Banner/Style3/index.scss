@@ -1,0 +1,131 @@
+@import '~styles/partials/theme.scss';
+
+.goldjam-banner-main {
+  position: relative;
+  margin-bottom: 30px;
+  clip-path: ellipse(80% 60% at 50% 40%);
+
+  @media (max-width: 767px) {
+    clip-path: ellipse(95% 60% at 50% 40%);
+  }
+
+  @media (max-width: 480px) {
+    clip-path: ellipse(110% 60% at 50% 40%);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #414141;
+    opacity: 0.41;
+  }
+
+  .banner-image {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 81vh;
+    @include flex-center;
+
+    @media (min-width: 1600px) {
+      min-height: calc(100vh - 100px);
+    }
+
+    .text-content {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px;
+
+      h1 {
+        font-size: 70px;
+        line-height: 106px;
+        padding-bottom: 40;
+        font-weight: 700;
+        color: var(--whiteTextColor);
+      }
+      h2 {
+        font-size: 30px;
+        line-height: 40px;
+        color: var(--whiteTextColor);
+      }
+
+      .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+          margin-right: 20px;
+          min-width: 250px;
+          height: 44px;
+          font-size: 20px;
+          line-height: 30px;
+          padding: 0 30px;
+          text-align: center;
+          background-color: var(--greyColor);
+          color: var(--greyTextColor);
+          @include transition(all $transition ease-in);
+          @include border-radius(3px);
+          @include flex-center();
+
+          &:hover {
+            background-color: var(--primaryColor);
+            color: var(--whiteTextColor);
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .goldjam-banner-main {
+    .banner-image {
+      align-items: center;
+
+      .text-content {
+        padding-top: 50px 20px;
+        h1 {
+          font-size: 50px;
+          line-height: 65px;
+          padding-bottom: 30px;
+        }
+        h2 {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .goldjam-banner-main {
+    .banner-image {
+      .text-content {
+        h1 {
+          font-size: 30px;
+          line-height: 45px;
+          padding-bottom: 10px;
+        }
+        h2 {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.filter {
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  .heading {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0.7em 0;
+    &.center {
+      text-align: center;
+    }
+  }
+  // .tags {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   gap: 10px;
+  //   height: min-content;
+  //   button {
+  //     outline: none;
+  //     border: none;
+  //     background: transparent;
+  //   }
+  //   .tag {
+  //     width: fit-content;
+  //     border-radius: 8px;
+  //     padding: 4px 10px;
+  //     font-size: 16px;
+  //     text-transform: capitalize;
+  //     color: var(--blackTextColor);
+  //     height: min-content;
+  //     cursor: pointer;
+  //     &:hover,
+  //     .active {
+  //       color: var(--whiteTextColor);
+  //       background: var(--secondaryColor);
+  //     }
+  //   }
+  // }
+  .apply-btn {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    .apply-btn {
+      display: block;
+      margin-top: 2rem;
+    }
+  }
+  // .btn {
+  //   background: var(--secondaryColor);
+  //   padding: 14px 10px;
+  //   border-radius: 6px;
+  //   color: var(--whiteTextColor);
+  //   font-size: 1.2em;
+  //   line-height: 1.3em;
+  //   text-transform: uppercase;
+  //   border: none;
+  //   outline: none;
+  //   width: 100%;
+  //   cursor: pointer;
+  //   &:hover {
+  //     background: lighten($secondaryColor, 8);
+  //   }
+  // }
+}

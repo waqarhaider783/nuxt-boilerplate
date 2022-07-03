@@ -1,0 +1,19 @@
+query getCategories {
+  categories {
+    edges {
+      node {
+        name
+        slug
+        Status {
+         currentStatus
+        }
+        categoryImage{
+          catImage {
+            sourceUrl
+            altText
+          }
+        }
+      }
+    }
+  }
+}

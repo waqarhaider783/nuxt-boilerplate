@@ -1,0 +1,253 @@
+@import '~assets/scss/partials/theme.scss';
+
+.auth-wrp {
+  display: flex;
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--whiteTextColor);
+  max-width: 1215px;
+  margin: auto;
+  height: 95vh;
+  .left,
+  .right {
+    width: 50%;
+  }
+  .main-wrp {
+    z-index: 1;
+  }
+}
+.left {
+  background-image: linear-gradient(
+    to bottom left,
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+  padding: 80px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  .logo {
+    height: 40px;
+    width: 170px;
+    position: absolute;
+    top: 5rem;
+    img {
+      object-fit: contain;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .heading {
+    font-size: 4.5rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    color: var(--whiteTextColor);
+  }
+  .description {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--whiteTextColor);
+  }
+}
+.right {
+  background: var(--whiteTextColor);
+  position: relative;
+  padding: 3rem 7rem;
+  text-align: center;
+  border-radius: 20px;
+
+  .title {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    color: var(--blackTextColor);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--greyTextColor);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+  .reset-pass {
+    font-size: 1rem;
+    color: var(--secondaryColor);
+    line-height: 1.5em;
+    text-align: center;
+    margin: 1rem auto;
+    text-decoration: underline;
+  }
+  .close {
+    color: var(--gray-500);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .textFieldC {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  .input-wrp {
+    max-width: 370px;
+    margin: auto;
+    .title {
+      font-size: 1rem;
+      text-transform: capitalize;
+      color: var(--blackTextColor);
+      line-height: 1.5em;
+      margin: 0.8rem 0;
+      width: fit-content;
+      &:not(.opt)::before {
+        content: '*';
+        color: var(--secondaryColor);
+        margin-right: 4px;
+      }
+      // &::after {
+      //   content: url('~/assets/images/svgs/info.svg');
+      //   font-size: 10px;
+      //   height: 10px;
+      //   width: 10px;
+      // }
+    }
+  }
+  .rights {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--gray-500);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .signup {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--blackTextColor);
+    margin: 1rem auto;
+    a {
+      color: var(--primaryColor);
+      font-weight: 500;
+    }
+  }
+  .separator {
+    max-width: 320px;
+    margin: auto;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    hr {
+      // color: var(--greyTextColor);
+      width: 100%;
+    }
+    .or {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--greyTextColor);
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: auto;
+      padding: 10px;
+      background: var(--whiteTextColor);
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .right {
+    padding: 2rem;
+  }
+  .left {
+    padding: 50px;
+    .logo {
+      width: 140px;
+    }
+    .main-wrp {
+      .heading {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .auth-wrp {
+    padding: 10px;
+  }
+  .right {
+    .rights,
+    .signup {
+      font-size: 0.85rem;
+    }
+  }
+  .left {
+    padding: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .auth-wrp {
+    flex-direction: column;
+    padding: 0;
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left {
+      padding: 4rem 2rem;
+      border-radius: 20px 20px 0 0;
+      .main-wrp {
+        padding-top: 3rem;
+        text-align: center;
+        .logo {
+          margin: auto;
+          right: 0;
+          left: 0;
+          width: 120px;
+        }
+        .heading {
+          font-size: 2.2rem;
+        }
+      }
+      .color-layer {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+    .right {
+      border-radius: 0 0 20px 20px;
+      padding: 2rem 1rem;
+      .title {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      .subtitle {
+        display: none;
+      }
+      .close {
+        display: none;
+      }
+      .rights,
+      .login {
+        font-size: 0.75rem;
+      }
+      .separator {
+        height: 20px;
+      }
+    }
+  }
+}
+
+.vue-tel- input {
+  font-size: 100px !important;
+  background-color: red !important;
+}

@@ -1,0 +1,19 @@
+@import '~assets/scss/partials/theme.scss';
+
+.serviceCard {
+  &__image {
+    position: relative;
+    padding: 0 0 calc(50% * 16 / 9) 0;
+    height: 0;
+    & > img {
+      position: absolute;
+      text-align: left;
+      object-fit: contain;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-position: left;
+    }
+  }
+}

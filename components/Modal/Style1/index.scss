@@ -1,0 +1,116 @@
+@import '~styles/partials/theme.scss';
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: var(--whiteTextColor);
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  max-width: 95%;
+  max-height: 95%;
+  overflow: auto;
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid var(--lightGreyColor);
+
+    & h2 {
+      flex: 1;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.2em;
+      color: var(--primaryTextColor);
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    & .btn-close {
+      font-size: 24px;
+      line-height: 1;
+      color: var(--greyColor);
+      padding-left: 25px;
+      cursor: pointer;
+      @include transition(color $transition linear);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        color: var(--primaryColor);
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    padding: 25px;
+  }
+
+  &__footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+    border-top: 1px solid var(--lightGreyColor);
+
+    & button {
+      font-size: 20px;
+      line-height: 1.2em;
+      color: var(--whiteTextColor);
+      padding: 10px 20px;
+      background-color: var(--primaryColor);
+      border: 1px solid var(--primaryColor);
+      border-radius: 5px;
+    }
+  }
+}
+
+// .modal-header,
+// .modal-footer {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 25px;
+// }
+
+// .btn-close {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   border: none;
+//   font-size: 20px;
+//   padding: 10px;
+//   cursor: pointer;
+//   font-weight: bold;
+//   color: #4aae9b;
+//   background: transparent;
+// }
+
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.5s ease;
+}

@@ -1,0 +1,11 @@
+@import "./theme.scss";
+
+@each $fw_key, $fw in $font-weights {
+  @include font-face(
+    $font-family,
+    "./partials/connectivity/fonts/#{$font-family-pathname}-#{$fw_key}",
+    #{$fw},
+    normal,
+    otf
+  );
+}

@@ -1,0 +1,106 @@
+@import '~/assets/scss/partials/theme.scss';
+.main-wrapper {
+  display: flex;
+  background: rgb(224, 224, 224);
+  padding: 95px 250px;
+  .testimonial {
+    display: flex;
+    padding: 10px;
+    max-width: 1360px;
+    gap: 5%;
+    align-items: center;
+    .img-wrapper {
+      width: 80%;
+      min-width: 120px;
+      height: 100%;
+      position: relative;
+      overflow: visible;
+      padding-top: 45%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .desc {
+      display: flex;
+      flex-direction: column;
+      .name {
+        font-size: 30px;
+        line-height: 1.5em;
+        color: $blackTextColor;
+        border-bottom: 2px solid $primaryColor;
+        padding-top: 10px;
+        font-weight: 600;
+        width: max-content;
+      }
+      .designation {
+        font-size: 20px;
+        line-height: 1.5em;
+        color: $primaryColor;
+        margin-bottom: 10px;
+      }
+      .description {
+        font-size: 25px;
+        line-height: 1.5em;
+        color: $blackTextColor;
+        font-weight: 600;
+        margin-top: 2em;
+      }
+    }
+  }
+  @media (max-width: 1550px) {
+    padding: 100px;
+    .testimonial {
+      gap: 4%;
+      .desc {
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1250px) {
+    padding: 60px;
+    .testimonial {
+      gap: 3%;
+      .desc {
+        .description {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .testimonial {
+      .img-wrapper {
+        width: 90%;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding: 20px;
+    margin-top: 1em;
+    .testimonial {
+      flex-direction: column;
+      .desc {
+        .name {
+          font-size: 20px;
+        }
+        .description {
+          font-size: 16px;
+        }
+      }
+      .img-wrapper {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+  // @media (max-width: 450px) {}
+}

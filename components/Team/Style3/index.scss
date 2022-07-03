@@ -1,0 +1,60 @@
+@import '~/assets/scss/partials/theme.scss';
+.template2 {
+  // max-width: 340px;
+  // display: block;
+  background: white;
+  figure {
+    width: 100%;
+    height: 0;
+    position: relative;
+    overflow: visible;
+    padding-top: calc(100% / 12 * 15.5);
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 18%;
+      background: white;
+      position: absolute;
+      top: 0;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      vertical-align: bottom;
+      -o-object-position: top center;
+      object-position: top center;
+    }
+  }
+  .info {
+    .name {
+      text-transform: capitalize;
+      font-size: 30px;
+      text-align: left;
+      font-weight: 600;
+      margin: 13px 0;
+    }
+    .title {
+      text-transform: uppercase;
+      font-size: 20px;
+      // line-height: 30px;
+    }
+  }
+
+  @media (max-width: 1550px) {
+    .info {
+      .name {
+        font-size: 22px;
+        margin: 8px 0;
+      }
+      .title {
+        font-size: 15px;
+      }
+    }
+  }
+}

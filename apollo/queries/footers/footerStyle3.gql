@@ -1,0 +1,39 @@
+query MyQuery {
+  pages(where: { name: "footer" }) {
+    edges {
+      node {
+        footerStyle3 {
+          fieldGroupName
+          aboutUsColumnStyle3 {
+            copyRightStyle3
+            descriptionStyle3
+            fieldGroupName
+            logoStyle3 {
+              id
+              sourceUrl
+              altText
+            }
+          }
+          quickLinksStyle3 {
+            fieldGroupName
+            titleStyle3
+            links {
+              fieldGroupName
+              item
+              url
+            }
+          }
+          socialSectionStyle3 {
+            fieldGroupName
+            headingStyle3
+            subHeadingStyle3
+            socialMediaHandleStyle3 {
+              titleStyle3
+              urlStyle3
+            }
+          }
+        }
+      }
+    }
+  }
+}

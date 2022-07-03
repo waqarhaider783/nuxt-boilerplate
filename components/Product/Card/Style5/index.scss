@@ -1,0 +1,49 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.gm-product-card-container {
+  min-width: 160px;
+  .gm-product-card {
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: 0px 5px 18px #7c7c7c2f;
+    background-color: var(--whiteColor);
+    padding: 15px 21px;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    h2 {
+      color: var(--blackTextColor);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    span {
+      display: inline-block;
+      color: var(--blackTextColor);
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+    &__button {
+      a {
+        padding: 0 45px;
+        height: 48px;
+        line-height: 48px;
+        cursor: pointer;
+        color: var(--whiteTextColor);
+        border: 0px;
+        font-size: 18px;
+        background-color: var(--primaryColor);
+        @include border-radius(5px);
+        @include transition(all $transition ease-in);
+
+        &:hover {
+          background-color: #10445b;
+        }
+      }
+    }
+    .get-deals {
+      font-size: 14px;
+      padding: 0;
+    }
+  }
+}

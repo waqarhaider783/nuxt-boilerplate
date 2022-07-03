@@ -1,0 +1,20 @@
+@import '~styles/partials/theme.scss';
+
+.category {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  padding: 10px 22px;
+  background-color: lighten($primaryColor, 30%);
+  color: var(--lightGreyColor);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include transition(all $transition ease-in);
+
+  &:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteTextColor);
+  }
+}

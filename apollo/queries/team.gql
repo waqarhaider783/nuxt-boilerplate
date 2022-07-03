@@ -1,0 +1,42 @@
+query MyQuery {
+  users {
+    edges {
+      node {
+        name
+        username
+        forUsers {
+          designation
+          socialMedia {
+            fieldGroupName
+            profileTxt
+            profileUrl
+          }
+          profilePicture {
+            sourceUrl
+            altText
+          }
+        }
+      }
+    }
+  }
+}
+
+# query MyQuery {
+#   users(first: 10999999) {
+#     nodes {
+#       username
+#       email
+#       forUsers {
+#         designation
+#         profilePicture {
+#           altText
+#           sourceUrl
+#         }
+#         socialMedia {
+#           profileTxt
+#           profileUrl
+#         }
+#       }
+#     }
+#   }
+# }

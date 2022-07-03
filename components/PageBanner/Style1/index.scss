@@ -1,0 +1,77 @@
+@import '~styles/partials/theme.scss';
+
+.pageBanner {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      63deg,
+      $primaryColor 0%,
+      $primaryColor 19%,
+      lighten($primaryColor, 10%) 37%,
+      $secondaryColor 55%,
+      lighten($secondaryColor, 10%) 72%,
+      lighten($secondaryColor, 15%) 89%,
+      lighten($secondaryColor, 20%) 100%
+    );
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  &__bgImg {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding: 0 0 calc(100% * 324 / 1640) 0;
+
+    @media only screen and (max-width: 980px) {
+      padding: 0 0 calc(100% * 145 / 351) 0;
+    }
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+    font-weight: 6 b 00;
+    line-height: 1.4em;
+    color: var(--whiteTextColor);
+    z-index: 2;
+
+    @media only screen and (max-width: 980px) {
+      font-size: 30px;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+      border-radius: 8px;
+    }
+  }
+}

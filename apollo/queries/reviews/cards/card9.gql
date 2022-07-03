@@ -1,0 +1,17 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle9 {
+          codeCardStyle9
+          titleCardStyle9
+          listItemCardStyle9 {
+            labelCardStyle9
+            resultCardStyle9
+            valueCardStyle9
+          }
+        }
+      }
+    }
+  }
+}

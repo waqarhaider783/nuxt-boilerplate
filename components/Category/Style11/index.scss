@@ -1,0 +1,41 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.category {
+  &__wrapper {
+    width: 100%;
+    padding: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 2px solid var(--primaryColor);
+  }
+
+  &__title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primaryColor);
+  }
+
+  &__text {
+    font-size: 27px;
+    color: var(--darkBlack);
+    line-height: 1.4em;
+    text-align: center;
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    &__wrapper {
+      padding: 30px;
+    }
+
+    &__title {
+      font-size: 37px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

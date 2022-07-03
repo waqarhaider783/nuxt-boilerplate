@@ -1,0 +1,74 @@
+@import '~assets/scss/partials/theme.scss';
+.review {
+  background: $gray-200;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 0;
+  .title {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0;
+    li {
+      .heading {
+        color: $gray-700;
+        font-size: 14px;
+        line-height: 1.5em;
+        font-weight: 500;
+      }
+      .value {
+        font-size: 30px;
+        line-height: 1.5em;
+        font-weight: 600;
+      }
+    }
+  }
+  .subDesc {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .description {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  @media (max-width: 1440px) {
+    padding: 30px;
+    ul {
+      flex-direction: column;
+      li {
+        margin-bottom: 15px;
+        .heading {
+          font-size: 12px;
+        }
+        .value {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 20px;
+    ul {
+      margin: 10px 0;
+    }
+    .subDesc {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+  }
+}

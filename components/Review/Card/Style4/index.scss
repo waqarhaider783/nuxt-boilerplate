@@ -1,0 +1,128 @@
+@import '~assets/scss/partials/theme.scss';
+.reviewCard {
+  &__imageCard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+    padding: 1rem;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-gap: 0.5rem;
+      justify-items: center;
+    }
+  }
+  &__image {
+    position: relative;
+    height: 0;
+    width: 300px;
+    padding: 0 0 300px 0;
+    & > img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    @media (max-width: 992px) {
+      padding-top: 0px;
+    }
+  }
+  &__titleName {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 992px) {
+      order: 2;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--blackTextColor);
+    line-height: 1.4;
+    padding-right: 10px;
+  }
+  &__name {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 100;
+    color: var(--borderColor);
+  }
+  &__price {
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--borderColor);
+    padding-top: 10px;
+    @media (max-width: 992px) {
+      order: 3;
+    }
+  }
+  &__description {
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--borderColor);
+    @media (max-width: 992px) {
+      order: 4;
+    }
+  }
+  &__tip {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    & > h3 {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--blackTextColor);
+      line-height: 1.5;
+    }
+    & > p {
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 200;
+      color: var(--borderColor);
+      padding-top: 5px;
+      padding-bottom: 20px;
+    }
+    @media (max-width: 992px) {
+      order: 5;
+    }
+  }
+  &__button {
+    padding-top: 15px;
+    @media (max-width: 992px) {
+      order: 1;
+      text-align: center;
+      padding-bottom: 20px;
+      display: flex;
+
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+    background: var(--whiteTextColor);
+    border: 2px solid var(--primaryColor);
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+
+    width: max-content;
+    &:hover {
+      color: var(--whiteTextColor);
+      background: var(--primaryColor);
+      border: 2px solid var(--primaryColor);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '~styles/partials/theme.scss';
+
+.anchor {
+  appearance: none;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blackTextColor);
+  line-height: 32px;
+  @include transition(color $transition ease-in);
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: var(--primaryColor);
+  }
+}

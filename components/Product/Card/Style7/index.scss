@@ -1,0 +1,94 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.rating {
+  margin: 1.5rem -0.1rem;
+  position: relative;
+  .ratings-anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  &.clickable {
+    .star {
+      cursor: pointer;
+    }
+  }
+  .star {
+    padding: 0 0.1rem;
+    &.active {
+      svg {
+        fill: #ffc107;
+      }
+    }
+    svg {
+      z-index: -1;
+      position: relative;
+      fill: $greyTextColor;
+      color: inherit;
+      width: 0.8rem;
+    }
+  }
+  .review-count {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    margin-left: 1ch;
+    font-weight: 300;
+  }
+}
+
+img {
+  width: 100%;
+}
+.product {
+  &.card {
+    vertical-align: top;
+    padding: 40px 10px;
+    &.alignment {
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
+    }
+    h2,
+    h3,
+    h4,
+    span,
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--darkBlack);
+    }
+    .details-block-container {
+      margin-top: 40px;
+      text-align: inherit;
+      * {
+        text-align: inherit;
+        letter-spacing: 1px;
+      }
+    }
+    .price {
+      color: $greyTextColor;
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+    .promotional-text {
+      font-weight: 600;
+      line-height: 24px;
+    }
+    .promotion-title {
+      color: #ff1616;
+    }
+  }
+}
+@media only screen and (min-width: 1023px) {
+}

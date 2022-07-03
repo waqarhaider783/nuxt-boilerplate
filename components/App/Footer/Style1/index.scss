@@ -1,0 +1,140 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.pet-footer {
+  background-color: var(--primaryColor);
+  padding: 85px 0;
+  margin-top: 20px;
+
+  &.primary-color {
+    background-color: var(--primaryColor);
+  }
+}
+
+.pet-quickLinks {
+  .content-footer {
+    flex: 1;
+    padding: 0 55px 0 15px;
+
+    .footer-logo {
+      margin-bottom: 25px;
+      display: inline-block;
+      img {
+        max-width: 250px;
+        object-fit: contain;
+        height: auto;
+      }
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 24px;
+      color: var(--whiteTextColor);
+      margin-bottom: 25px;
+    }
+
+    .copyright-text {
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--whiteTextColor);
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+  }
+  .footerLinks {
+    width: 250px;
+    padding: 0 15px;
+    @media (min-width: 1024px) {
+      &:last-child {
+        width: auto;
+      }
+    }
+
+    h4,
+    h5 {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 34px;
+      font-weight: 800;
+      padding-bottom: 20px;
+      color: var(--whiteTextColor);
+      text-transform: capitalize;
+
+      svg {
+        display: block;
+        margin: 10px 0 0;
+        path {
+          stroke: var(--primaryColor);
+        }
+      }
+    }
+
+    ul {
+      li {
+        padding: 10px 0;
+
+        a {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+          color: var(--whiteTextColor);
+          display: inline-block;
+          @include transition(all $transition ease-in);
+
+          &:hover {
+            color: var(--primaryColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .pet-footer {
+    padding: 45px 0;
+  }
+  .pet-quickLinks {
+    .content-footer {
+      width: 100%;
+      flex: 1 1 100%;
+      padding: 0 15px;
+      text-align: center;
+      .footer-logo {
+        img {
+          max-width: 175px;
+        }
+      }
+    }
+
+    .footerLinks {
+      width: 33.33%;
+      text-align: center;
+
+      h5 {
+        svg {
+          margin: 10px auto 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .pet-quickLinks {
+    .content-footer {
+      .footer-logo {
+        margin-bottom: 15px;
+        img {
+          max-width: 125px;
+        }
+      }
+    }
+    .footerLinks {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/* ==============================
+   GOLD JAM ROOT COLORS STARTS.
+================================= */
+:root {
+  --primaryColor: #2b4edd;
+  --secondaryColor: #1a2531;
+  --tertiaryColor: #dd7a2f; //not define
+  --darkBlack: #414141; //not define
+  --greyColor: #868689; //not define
+  --lightGreyColor: #a7a7a7; //not define
+  --darkGreyColor: #172730; //not define
+  --greyTextColor: #6d6e71; //not define
+  --primaryTextColor: #000000;
+  --whiteTextColor: #ffffff;
+  --blackTextColor: #000000;
+  --borderColor: #707070;
+  --gp: 25px;
+}
+
+@media (min-width: 641px) {
+  :root {
+    --gp: 30px;
+  }
+}

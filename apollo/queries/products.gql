@@ -1,0 +1,33 @@
+query MyQuery($productIDs: [ID!]!) {
+  products(where: { in: $productIDs }) {
+    nodes {
+      id
+      title
+      id
+      databaseId
+      featuredImage {
+        node {
+          sourceUrl
+          mediaDetails {
+            sizes {
+              file
+              fileSize
+              mimeType
+              height
+              sourceUrl
+              width
+              name
+            }
+          }
+        }
+      }
+      productsDetails {
+        brand
+        category
+        overallRating {
+          grade
+        }
+      }
+    }
+  }
+}

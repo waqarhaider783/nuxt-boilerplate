@@ -1,0 +1,94 @@
+@import '~assets/scss/partials/theme.scss';
+
+h1 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.padding-tb {
+  padding: 25px 0;
+}
+
+.contact-info1 {
+  padding: 0 28px;
+}
+
+.test {
+  background-color: lighten($borderColor, 50%);
+}
+
+.widgetBox {
+  position: relative;
+}
+.main {
+  background: #e2e2e2 !important;
+}
+// Header Login Widget
+.accountIcon:focus + .account__dropdown,
+.accountIcon:hover + .account__dropdown,
+.account__dropdown:focus,
+.account__dropdown:hover {
+  @media only screen and (min-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}
+
+// Header Cart Widget
+.cartIcon:focus + .cart__dropdown,
+.cartIcon:hover + .cart__dropdown,
+.cart__dropdown:focus,
+.cart__dropdown:hover {
+  @media only screen and (min-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}
+.slider {
+  display: flex;
+  @media (max-width: 1200px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
+.slider-wrapper {
+  .swiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: var(--gray-800);
+      font-weight: 900;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--primaryColor);
+    }
+  }
+}
+
+.abc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    height: 100px;
+    color: var(--primaryColor);
+  }
+
+  & span:first-of-type {
+    background-color: violet;
+  }
+
+  & span:last-of-type {
+    background-color: yellowgreen;
+  }
+}

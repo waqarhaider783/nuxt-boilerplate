@@ -1,0 +1,45 @@
+@import '~assets/scss/partials/theme.scss';
+
+.services {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 2rem;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cards {
+    position: relative;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    direction: ltr;
+    div:nth-child(1) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .flx > p {
+        margin: 10px 0px;
+      }
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    text-align: center;
+  }
+
+  &__card.reverse {
+    direction: rtl;
+  }
+
+  .reverse &__image {
+    text-align: center;
+  }
+}

@@ -1,0 +1,33 @@
+@import '~assets/scss/partials/theme.scss';
+
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.announcement {
+  width: 100%;
+  background: lighten($primaryColor, 35);
+  color: var(--primaryColor);
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 800;
+
+  &__text {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    text-transform: uppercase;
+    color: inherit;
+    transition: none;
+    padding: 0 10px;
+  }
+}

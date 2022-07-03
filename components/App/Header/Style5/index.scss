@@ -1,0 +1,405 @@
+@import '~assets/scss/partials/theme.scss';
+
+@keyframes moveLeft {
+  0% {
+    left: 0;
+    background-color: transparent;
+  }
+
+  10% {
+    left: 0;
+    background-color: transparent;
+  }
+
+  100% {
+    left: var(--left);
+    background-color: transparent;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -150px;
+  }
+
+  10% {
+    bottom: -150px;
+  }
+
+  100% {
+    bottom: 72px;
+  }
+}
+
+.header {
+  --left: calc(280px - 5%);
+
+  @media only screen and (max-width: 400px) {
+    --left: calc(230px - 5%);
+  }
+
+  position: relative;
+
+  &__top {
+    padding: 35px 0;
+    background-color: var(--whiteTextColor);
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+
+      @media only screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .mobileMenu {
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      color: var(--blackTextColor);
+      padding: 10px 8px;
+      margin: -10px 0;
+      background-color: var(--whiteTextColor);
+      @include transition(all $transition linear);
+
+      @media only screen and (max-width: 767px) {
+        display: flex;
+      }
+
+      &:focus,
+      &:hover {
+        cursor: pointer;
+        color: var(--primaryColor);
+      }
+
+      &--opened {
+        @media only screen and (max-width: 767px) {
+          position: absolute;
+          top: 0;
+          left: var(--left);
+          animation: moveLeft $transition;
+        }
+      }
+
+      &__icon {
+        font-size: 20px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__icons {
+    justify-self: end;
+    align-self: center;
+    grid-column: 3;
+
+    @media only screen and (max-width: 767px) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+      background-color: var(--lightGreyColor);
+    }
+
+    &__list {
+      display: flex;
+      margin: 0 -10px;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        margin: 0;
+      }
+
+      & li {
+        position: relative;
+
+        @media only screen and (max-width: 767px) {
+          width: 33.33%;
+          padding: 22px 0;
+          text-align: center;
+
+          &:not(:last-of-type) {
+            border-right: 1px solid var(--darkGreyColor);
+          }
+
+        }
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+    color: var(--blackTextColor);
+    margin: 0 10px;
+    @include transition(color $transition ease);
+
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+      color: var(--primaryColor);
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 28px;
+      color: var(--whiteTextColor);
+      margin: 0;
+      @include transition(color $transition ease);
+    }
+  }
+
+  .cartIcon {
+    position: relative;
+
+    &__counter {
+      font-size: 8px;
+      height: 18px;
+      width: 17.1px;
+      border-radius: 50%;
+      background-color: var(--primaryColor);
+      color: var(--whiteTextColor);
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+    grid-column: 2;
+
+    @media only screen and (max-width: 767px) {
+      justify-self: end;
+    }
+
+    &>img {
+      min-width: 130px;
+      min-height: 19px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+    @media only screen and (max-width: 767px) {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      min-width: 280px;
+      height: 100vh;
+      display: inline-block;
+      min-height: 100vh;
+      max-height: 100vh;
+      padding: 0;
+      background-color: var(--lightGreyColor);
+      overflow: auto;
+      @include transition(all $transition ease);
+
+      @media only screen and (max-width: 400px) {
+        width: 230px;
+        min-width: auto;
+      }
+    }
+
+    &--show {
+      left: 0;
+      padding-bottom: 80px;
+    }
+
+    &>a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--blackTextColor);
+      padding: 3px 10px;
+      margin: 0 10px;
+      @include transition(all $transition linear);
+
+      &:active,
+      &:focus,
+      &:hover {
+        box-shadow: 0px -6px 0px 0px lighten($primaryColor, 35) inset;
+      }
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        font-weight: 400;
+        color: var(--whiteTextColor);
+        padding: 15px;
+        margin: 0;
+        background-color: var(--lightGreyColor);
+        border-bottom: 1px solid var(--darkGreyColor);
+
+        &:active,
+        &:focus,
+        &:hover {
+          box-shadow: none;
+          background-color: var(--darkGreyColor);
+        }
+      }
+    }
+  }
+
+  &__search {
+
+    &__backdrop {
+      display: none;
+      overflow: hidden;
+
+      @media only screen and (max-width: 767px) {
+        position: absolute;
+        bottom: -150px;
+        left: 0;
+        width: 100%;
+        background-color: var(--lightGreyColor);
+        @include transition(all $transition-short linear);
+      }
+
+      &--show {
+        display: flex;
+
+        @media only screen and (min-width: 768px) {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 100vh;
+          width: 100%;
+          background-color: rgba(0, 0, 0, .8);
+          z-index: 9998;
+
+          justify-content: center;
+          align-items: center;
+          border: 0 solid transparent;
+        }
+
+        @media only screen and (max-width: 767px) {
+          bottom: 72px;
+          animation: moveUp $transition;
+        }
+      }
+    }
+
+    &__wrap {
+      width: 100%;
+      padding: 0 15%;
+
+      @media only screen and (max-width: 767px) {
+        padding: 0;
+      }
+    }
+
+    &__group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      @media only screen and (max-width: 767px) {
+        padding: 10px;
+      }
+
+      & input {
+        flex: 1 1 auto;
+
+        appearance: none;
+        display: inline-block;
+        border: 0;
+
+        @media only screen and (min-width: 768px) {
+          font-size: 50px;
+          color: var(--whiteTextColor);
+          margin-right: 25px;
+          padding: 0;
+          text-align: center;
+          line-height: 1.5;
+          border-bottom: 2px solid var(--whiteTextColor);
+          background: none;
+        }
+
+        @media only screen and (max-width: 767px) {
+          font-size: 16px;
+          padding: 10px 15px;
+          line-height: 1;
+          background-color: var(--whiteTextColor);
+          border: 2px solid var(--whiteTextColor);
+          z-index: 10;
+          @include transition(all $transition-short linear);
+
+          &:focus,
+          &:hover {
+            border: 2px solid var(--primaryColor);
+          }
+        }
+      }
+    }
+
+    &__icon {
+      color: var(--whiteTextColor);
+      cursor: pointer;
+
+      &--times {
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+          display: inline-block;
+          font-size: 40px;
+        }
+      }
+
+      &--search {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+          display: inline-block;
+          font-size: 16px;
+          padding: 16.2px;
+          background-color: var(--blackTextColor);
+          @include transition(all $transition-short linear);
+
+          &:focus,
+          &:hover {
+            background-color: var(--primaryColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Header Login Widget
+.accountIcon:focus+.account__dropdown,
+.accountIcon:hover+.account__dropdown,
+.account__dropdown:focus,
+.account__dropdown:hover {
+
+  @media only screen and (min-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}
+
+// Header Cart Widget
+.cartIcon:focus+.cart__dropdown,
+.cartIcon:hover+.cart__dropdown,
+.cart__dropdown:focus,
+.cart__dropdown:hover {
+  @media only screen and (min-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}

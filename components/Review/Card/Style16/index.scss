@@ -1,0 +1,65 @@
+@import '~assets/scss/partials/theme.scss';
+.review {
+  background: $gray-200;
+  border-radius: 10px;
+  padding-top: 20px;
+  figure {
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+    text-align: center;
+    img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+  ul {
+    padding: 20px;
+    li {
+      font-size: 18px;
+      line-height: 1.5em;
+      color: $gray-600;
+      margin-bottom: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      svg {
+        margin-right: 20px;
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    figure {
+      max-width: 360px;
+    }
+    ul {
+      li {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    figure {
+      max-width: 330px;
+    }
+    ul {
+      padding: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    figure {
+      max-width: 300px;
+    }
+    ul {
+      padding: 12px;
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}

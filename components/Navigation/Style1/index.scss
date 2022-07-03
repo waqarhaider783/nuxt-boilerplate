@@ -1,0 +1,41 @@
+@import '~styles/partials/theme.scss';
+
+.top-searches {
+  li {
+    a {
+      color: var(--greyTextColor);
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: 500;
+      width: fit-content;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        transition: 0.3s all ease-in-out;
+        color: var(--primaryColor);
+      }
+    }
+  }
+}
+.show-more {
+  display: none;
+  margin: auto;
+  margin-top: 1.2em;
+  background: var(--gray-100);
+  padding: 6px 10px;
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .top-searches {
+    gap: 20px;
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+  .show-more {
+    display: block;
+  }
+}

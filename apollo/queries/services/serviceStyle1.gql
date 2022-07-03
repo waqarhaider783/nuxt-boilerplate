@@ -1,0 +1,19 @@
+query MyQuery {
+  pages(where: { title: "Services" }) {
+    edges {
+      node {
+        serviceCardStyle1 {
+          cardStyle1Heading
+          cardStyle1SubHeading
+          serviceColumnCardStyle1 {
+            cardStyle1Heading
+            cardStyle1SubHeading
+            image {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

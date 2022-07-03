@@ -1,0 +1,15 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.footer {
+  color: var(--blackTextColor);
+  padding: 10px 0;
+  background: var(--whiteTextColor);
+
+  &__text {
+    text-align: left;
+
+    & > p {
+      line-height: 1.75em;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '~/assets/scss/partials/theme.scss';
+.button-wrp {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0.8rem;
+  border-radius: 4px;
+  align-items: center;
+  width: 100%;
+  margin: 0.6rem auto;
+  border: 1px solid var(--primaryColor) !important;
+  cursor: pointer;
+  background: var(--whiteTextColor);
+  &.min {
+    max-width: 320px;
+  }
+
+  &.facebook {
+    background: #234dd3;
+    border: none !important;
+    .btn-text {
+      color: var(--whiteTextColor);
+    }
+  }
+  &.google {
+    background: transparent;
+  }
+  &.email {
+    background: transparent;
+  }
+  .logo {
+    height: 30px;
+    width: 30px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+  .btn-text {
+    width: 70%;
+    text-align: left;
+    color: var(--blackTextColor);
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 1024px) {
+  .button-wrp {
+    .btn-text {
+      width: 75%;
+    }
+  }
+}
+@media (max-width: 930px) {
+  .button-wrp {
+    padding: 0.7rem;
+    .btn-text {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .button-wrp {
+    padding: 0.6rem 0.7rem;
+    border-radius: 5px;
+    .logo {
+      height: 20px;
+      width: 20px;
+    }
+    .btn-text {
+      font-size: 13px;
+    }
+  }
+}

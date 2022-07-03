@@ -1,0 +1,31 @@
+@import '~styles/partials/theme.scss';
+
+.categoryContainer {
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--blackTextColor);
+  background-color: var(--whiteTextColor);
+  width: 100%;
+  @include transition(box-shadow $transition linear);
+
+  // border: 1px solid red;
+  font-weight: 600;
+  box-shadow: 0 3px 16px 0 rgba(133, 133, 133, 0.2);
+
+  &:hover {
+    box-shadow: 0 3px 16px 0 rgba(65, 65, 65, 0.3);
+  }
+
+  & > img {
+    width: 75px;
+    height: auto;
+  }
+
+  & > :last-child {
+    margin-top: 20px;
+  }
+}

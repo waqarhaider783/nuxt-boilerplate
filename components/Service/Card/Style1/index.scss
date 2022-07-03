@@ -1,0 +1,39 @@
+@import '~assets/scss/partials/theme.scss';
+
+.serviceCard {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    background-color: var(--whiteTextColor);
+    border-radius: 50%;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(28%, 75%);
+      width: 112px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+  }
+}

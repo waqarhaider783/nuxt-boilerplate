@@ -1,0 +1,135 @@
+/**
+ 
+ * @author Ashish Ali <aashish.karowalia@va8ivedigital.com>
+ */
+
+// /* =======
+//    ICONS
+//    ======= */
+// @import '../../icons/variables';
+// // -----------------------------------------/
+
+/* =======
+   MIXINS 
+   ======= */
+@import '../_mixins';
+// -----------------------------------------/
+
+//using these variables only for builten function of scss eg: lighten,darken,rgba in colors,
+$primaryColor: #dda72f;
+$secondaryColor: #ddd12f;
+$tertiaryColor: #dd7a2f;
+$darkBlack: #414141;
+$greyColor: #868689;
+$lightGreyColor: #a7a7a7;
+$darkGreyColor: #172730;
+$primaryTextColor: #414141;
+$greyTextColor: #6d6e71;
+$whiteTextColor: #ffffff;
+$blackTextColor: #000000;
+$borderColor: #dda72f;
+
+// default colors starts never change//
+$success: #28a745 !default;
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+
+// default colors Ends never change//
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primaryColor': $primaryColor,
+    'secondaryColor': $secondaryColor,
+    'tertiaryColor': $tertiaryColor,
+    'darkBlack': $darkBlack,
+    'greyColor': $greyColor,
+    'lightGreyColor': $lightGreyColor,
+    'darkGreyColor': $darkGreyColor,
+    'greyTextColor': $greyTextColor,
+    'primaryTextColor': $primaryTextColor,
+    'whiteTextColor': $whiteTextColor,
+    'blackTextColor': $blackTextColor,
+    'borderColor': $borderColor,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+  ),
+  $theme-colors
+);
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+  ),
+  $grays
+);
+
+/* ================================
+      Social Media Theme Color
+=================================== */
+$socialMediaThemeColor: (
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  instagram: #dd2a7b,
+  linkedin: #0274b3,
+  google-plus: #dd4d40,
+  pinterest: #e56262,
+  youtube: #d8362a,
+);
+
+@function socialColor($color-name) {
+  @return map-get($socialMediaThemeColor, $color-name);
+}
+// -----------------------------------------/
+
+/* Default Setting */
+$body: (
+  background-color: $whiteTextColor,
+  color: $blackTextColor,
+  line-height: 1,
+);
+$font-family: 'Poppins';
+$font-size: 14px;
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  black: 900,
+);
+$font-family-pathname: to-lower-case($font-family);
+$border-radius: 5px;
+$total-grids: 12;
+
+@function body($body-key) {
+  @return map-get($body, $body-key);
+}
+
+@function weights($font-weight) {
+  @return map-get($font-weights, $font-weight);
+}

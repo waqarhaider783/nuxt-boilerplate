@@ -1,0 +1,124 @@
+@import '~styles/partials/theme.scss';
+
+a {
+  display: block;
+  cursor: pointer;
+  color: var(--primaryTextColor);
+  text-decoration: none;
+}
+
+.couponCard {
+  &__inner-box {
+    height: 100%;
+    border: 1px solid var(--borderColor);
+    background-color: var(--whiteTextColor);
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  &__image-container {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 45%;
+    background-color: var(--primaryColor);
+
+    @media (max-width: 767px) {
+      flex: 0 0 auto;
+      width: 25%;
+      min-width: 120px;
+      padding-top: 0%;
+      height: auto;
+    }
+
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+      z-index: 1;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1440px) {
+      padding: 12px 16px 12px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
+
+    &__caption {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+
+      @media (max-width: 1440px) {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__title {
+      font-size: 22px;
+      line-height: 33px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      flex: 1 0 auto;
+      min-height: 97px;
+
+      @media (max-width: 1440px) {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        min-height: 75px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        min-height: 75px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__used-count {
+      font-size: 16px;
+      font-weight: 600;
+
+      @media (max-width: 1440px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '~/assets/scss/partials/theme.scss';
+.testimonial {
+  position: relative;
+  .main-wrapper {
+    padding: 50px 30px;
+    background: $white;
+    box-shadow: 0px 0px 25px $gray-300;
+    display: flex;
+    max-width: 1150px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .description {
+      width: 50%;
+      text-align: left;
+      font-size: 25px;
+      line-height: 1.5em;
+      font-weight: 600;
+    }
+    figure {
+      position: relative;
+    }
+    figure::before {
+      content: '';
+      width: 82%;
+      height: calc(100% - 2px);
+      position: absolute;
+      top: -13px;
+      right: -14px;
+      z-index: 0;
+      border: 14px solid #ecd32f;
+    }
+    img {
+      z-index: 1;
+      position: relative;
+      border: 35px solid $white;
+      max-width: 480px;
+      max-height: 540px;
+    }
+  }
+  .main-wrapper::before {
+    content: '';
+    border: 14px #ecd32f solid;
+    width: 40%;
+    left: -5%;
+    z-index: -1;
+    position: absolute;
+    height: 115%;
+  }
+}

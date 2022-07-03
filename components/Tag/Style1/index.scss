@@ -1,0 +1,31 @@
+@import '~/assets/scss/partials/theme.scss';
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: min-content;
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  .tag {
+    width: fit-content;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--gray-600);
+    height: min-content;
+    border: 1px solid var(--gray-500);
+    cursor: pointer;
+    transition: 0.3s background ease-in-out, 0.3s color ease-in-out;
+    &:hover,
+    .active {
+      color: var(--whiteTextColor);
+      background: var(--primaryColor);
+      border: 1px solid var(--primaryColor);
+      transition: 0.3s background ease-in-out, 0.3s color ease-in-out;
+    }
+  }
+}

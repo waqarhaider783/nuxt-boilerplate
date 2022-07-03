@@ -1,0 +1,41 @@
+@import '~styles/partials/theme.scss';
+
+.richTextContent1 {
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--blackTextColor);
+    line-height: 1.4em;
+  }
+  span,
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--greyTextColor);
+    line-height: 1.4em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .richTextContent {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    span,
+    p {
+      font-size: 16px;
+    }
+  }
+}

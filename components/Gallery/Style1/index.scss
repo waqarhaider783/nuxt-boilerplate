@@ -1,0 +1,15 @@
+@import '~styles/partials/theme.scss';
+
+.gallery {
+  &__image {
+    img {
+      width: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+
+  .gap-0 {
+    gap: 0;
+  }
+}

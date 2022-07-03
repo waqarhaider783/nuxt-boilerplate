@@ -1,0 +1,205 @@
+@import '~styles/partials/theme.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--darkBlack);
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    padding: 23px 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 30%;
+      width: 1000px;
+      height: 100%;
+      background-color: var(--primaryColor);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-color: var(--primaryColor);
+      transform: skewX(25deg);
+    }
+
+    & img {
+      position: relative;
+      z-index: 2;
+      max-height: 52px;
+      width: auto;
+    }
+  }
+
+  &__sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__navList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 0;
+
+    @media screen and (max-width: 979px) {
+      display: none;
+    }
+
+    & li {
+      margin: 0 25px;
+
+      @media screen and (max-width: 1200px) {
+        margin: 0 18px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        margin: 0 14px;
+      }
+    }
+
+    & a {
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--whiteTextColor);
+    }
+  }
+
+  &__icons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primaryColor);
+    color: var(--whiteTextColor);
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    z-index: 1;
+    @include transition(
+      color $transition ease,
+      background-color $transition ease
+    );
+
+    @media screen and (max-width: 979px) {
+      display: flex;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+      background-color: var(--whiteTextColor);
+      color: var(--primaryColor);
+    }
+  }
+
+  &__navigation {
+    background-color: var(--whiteTextColor);
+    box-shadow: 0px 0px 8px 1px rgb(1 1 1 / 30%);
+
+    @media screen and (min-width: 980px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 979px) {
+      display: inline-block;
+      background-color: var(--primaryColor);
+    }
+
+    @media screen and (max-width: 979px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 19;
+      height: 100vh;
+      width: 250px;
+      overflow: hidden;
+      @include transition(all $transition-long linear);
+    }
+
+    &--open {
+      @media screen and (max-width: 979px) {
+        right: 0;
+      }
+    }
+
+    &__closeBtn {
+      display: none;
+      justify-content: flex-end;
+      padding: 10px;
+      color: var(--whiteTextColor);
+
+      @media screen and (max-width: 979px) {
+        display: flex;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      @media screen and (max-width: 979px) {
+        display: block;
+        height: calc(100% - 70px);
+        padding: 0;
+        overflow-y: auto;
+      }
+    }
+
+    &__links {
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+      padding: 15px;
+      color: var(--primaryTextColor);
+      text-transform: capitalize;
+      @include transition(all $transition ease);
+
+      @media (max-width: 979px) {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--whiteTextColor);
+        margin: 0;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-top: 1px solid var(--secondaryColor);
+        // border-bottom: 1px solid var(--primaryColor);
+
+        &:last-of-type {
+          border-bottom: 1px solid var(--secondaryColor);
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--whiteTextColor);
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}

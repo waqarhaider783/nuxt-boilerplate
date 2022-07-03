@@ -1,0 +1,37 @@
+@import '~styles/partials/theme.scss';
+
+.catAndStr {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    li {
+      padding: 4px;
+    }
+  }
+}
+
+.anchor {
+  appearance: none;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 14px;
+  color: var(--blackTextColor);
+  line-height: 17px;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background-color: var(--lightGreyColor);
+  @include transition(
+    color $transition ease-in,
+    background-color $transition ease-in
+  );
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: var(--whiteTextColor);
+    background-color: var(--primaryColor);
+  }
+}

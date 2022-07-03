@@ -1,0 +1,33 @@
+.services {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    text-align: left;
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding-left: 10px;
+  }
+  &__btn {
+    width: fit-content;
+    padding: 0.5rem;
+    background: var(--primaryColor);
+    color: var(--whiteTextColor);
+    border-radius: 5px;
+    border: 1px solid var(--primaryColor);
+  }
+}

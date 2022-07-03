@@ -1,0 +1,98 @@
+@import '~styles/partials/theme.scss';
+
+.aboutCard {
+  padding: 30px 0;
+
+  &__division {
+    position: relative;
+    min-height: 435px;
+    display: flex;
+
+    @media (max-width: 979px) {
+      display: block;
+    }
+  }
+
+  &__contentSection {
+    width: 75%;
+    background-color: var(--whiteTextColor);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    padding-right: 25%;
+    box-shadow: 1px 1px 10px 0px rgb(0 0 0 / 20%);
+
+    @media (max-width: 979px) {
+      width: 100%;
+      padding: 25px 25px 25%;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    & h1,
+    & h2,
+    & h3 {
+      font-weight: 600;
+      font-size: 30px;
+      margin-bottom: 20px;
+
+      @media (max-width: 979px) {
+        font-size: 25px;
+      }
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+
+      @media (max-width: 979px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__image {
+    width: 44%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    @media (max-width: 979px) {
+      position: static;
+      margin: -22% auto 0;
+      width: 60%;
+    }
+
+    & img {
+      max-width: 530px;
+      width: 100%;
+      box-shadow: 1px 1px 10px 0px rgb(0 0 0 / 20%);
+    }
+  }
+
+  &.reverse &__division {
+    flex-direction: row-reverse;
+  }
+
+  &.reverse &__contentSection {
+    padding-right: 25px;
+    padding-left: 25%;
+
+    @media (max-width: 979px) {
+      padding-left: 25px;
+    }
+  }
+
+  &.reverse &__image {
+    left: 0;
+    right: auto;
+    justify-content: flex-start;
+  }
+}

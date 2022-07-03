@@ -1,0 +1,9 @@
+@import '~assets/scss/partials/theme.scss';
+
+.otp {
+  font-size: 20px;
+  color: var(--blackTextColor);
+  width: 30px;
+  text-align: center;
+  @include remove-arrows;
+}

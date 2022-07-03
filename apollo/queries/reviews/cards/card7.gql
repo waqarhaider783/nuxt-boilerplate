@@ -1,0 +1,24 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle7 {
+          contentBoxCardStyle7 {
+            buttonLinkCardStyle7
+            buttonTextCardStyle7
+            descriptionBoxCardStyle7
+            isverifiedBoxCardStyle7
+            ratingBoxCardStyle7
+            titleBoxCardStyle7
+            tooltipBoxCardStyle7
+            imageBoxCardStyle7 {
+              id
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+}

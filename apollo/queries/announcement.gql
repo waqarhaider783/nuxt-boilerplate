@@ -1,0 +1,11 @@
+query MyQuery {
+  pages(where: {title: "Announcement"}) {
+    edges {
+      node {
+        announcementStyle1 {
+         messageStyle1
+        }
+      }
+    }
+  }
+}

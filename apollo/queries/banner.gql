@@ -1,0 +1,74 @@
+query MyQuery {
+  pages(where: {title: "home"}) {
+    edges {
+      node {
+        bannerStyle1 {
+          bannerDescription
+          bannerHeading
+          buttonLinkOne
+          buttonLinkTwo
+          buttonTxtOne
+          buttonTxtTwo
+          bannerImage {
+            sourceUrl
+            altText
+          }
+        }
+        bannerStyle2 {
+          bannerStyle2 {
+            image {
+              altText
+              sourceUrl
+            }
+          }
+        }
+        bannerStyle3 {
+          heading
+          image {
+            altText
+            sourceUrl
+          }
+          subHeading
+        }
+        bannerStyle4 {
+          image {
+            altText
+            sourceUrl
+          }
+          contentBox {
+            btnTxt
+            btnUrl
+            description
+            heading
+          }
+        }
+        bannerStyle5 {
+          descriptionStyle5
+          headingStyle5
+          subHeadingStyle5
+          imageStyle5 {
+            altText
+            sourceUrl
+          }
+        }
+        bannerStyle6 {
+          headingStyle6
+          subHeadingStyle6
+          imageStyle6 {
+            altText
+            sourceUrl
+          }
+        }
+        bannerStyle7 {
+          images {
+            linkStyle7
+            image {
+              altText
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

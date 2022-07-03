@@ -1,0 +1,48 @@
+@import '~styles/partials/theme.scss';
+
+.list {
+  margin-top: 40px;
+  width: 100%;
+
+  // collapse work
+  max-height: 500px;
+  overflow: hidden;
+  opacity: 1;
+  @include transition(
+    max-height $transition linear,
+    opacity $transition-short linear
+  );
+
+  &--hide {
+    max-height: 0px;
+    opacity: 0;
+  }
+
+  & > li {
+    color: var(--blackTextColor);
+  }
+}
+
+.sectionStyle {
+  text-align: center;
+
+  &__title {
+    font-size: 24px;
+    cursor: pointer;
+
+    h1 {
+      display: inline-block;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &__icon {
+    transform: rotate(0deg);
+    @include transition(transform $transition linear);
+
+    &--rotate {
+      transform: rotate(-90deg);
+    }
+  }
+}

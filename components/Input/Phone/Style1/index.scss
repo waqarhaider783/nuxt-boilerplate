@@ -1,0 +1,76 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.vueTelInputCustom .vue-tel-input {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+
+  &:focus-within {
+    box-shadow: none;
+    border: none;
+  }
+
+  & .vti__dropdown {
+    padding: 12px;
+    border-bottom: 2px solid var(--lightGreyColor);
+    @include transition(border $transition linear);
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      border-bottom: 2px solid var(--secondaryColor);
+    }
+  }
+
+  & .vti__dropdown .vti__dropdown-list {
+    padding: 10px 0;
+  }
+
+  & .vti__dropdown .vti__dropdown-list .vti__dropdown-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+
+  & .vti__dropdown .vti__dropdown-list .vti__dropdown-item .vti__flag-wrapper {
+    margin-right: 6px;
+  }
+
+  & .vti__dropdown .vti__selection .vti__flag {
+    display: none;
+  }
+
+  & .vti__dropdown .vti__selection .vti__country-code {
+    padding-right: 10px;
+  }
+
+  & .vti__dropdown .vti__selection .vti__country-code,
+  & .vti__dropdown .vti__selection .vti__dropdown-arrow {
+    font-size: 22px;
+    color: var(--primaryTextColor);
+  }
+
+  & input {
+    font-size: 22px;
+    color: var(--primaryTextColor);
+    margin-left: 10px;
+    padding: 12px;
+    border-bottom: 2px solid var(--lightGreyColor);
+    background: transparent;
+    @include transition(color $transition linear, border $transition linear);
+
+    @include placeholder {
+      font-size: inherit;
+      line-height: inherit;
+      color: var(--lightGreyColor);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      border-bottom: 2px solid var(--secondaryColor);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.codeVerification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 calc(5px * -1);
+
+    @media only screen and (max-width: 428px) {
+      margin: 0 calc(4px * -1);
+    }
+  }
+
+  input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    color: var(--primaryTextColor);
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--primaryTextColor);
+    box-shadow: 0 0 0 1px var(--primaryTextColor);
+    outline: none;
+    @include transition(
+      border $transition-short linear,
+      box-shadow $transition-short linear
+    );
+
+    @media only screen and (max-width: 428px) {
+      font-size: 22px;
+      width: 45px;
+      height: 45px;
+      margin: 4px;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 1px solid var(--primaryTextColor);
+    }
+
+    &:invalid {
+      box-shadow: none;
+      border: 1px solid var(--borderColor);
+    }
+  }
+}

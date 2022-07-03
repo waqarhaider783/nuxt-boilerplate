@@ -1,0 +1,12 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.footer {
+  background: #ecf2ff;
+  color: var(--blackTextColor);
+  padding: 1.5rem 0;
+
+  p {
+    text-align: center;
+    width: 100%;
+  }
+}

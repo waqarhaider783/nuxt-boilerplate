@@ -1,0 +1,44 @@
+@import '~assets/scss/partials/theme.scss';
+
+.serviceCard {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 2rem;
+    @media (max-width: 767px) {
+      flex-direction: row;
+    }
+  }
+  &__detail {
+    display: grid;
+    grid-gap: 1rem;
+    background: var(--whiteTextColor);
+    color: var(--primary TextColor);
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border: 1px groove var(--whiteTextColor);
+    border-radius: 5px;
+  }
+  &__image {
+    position: relative;
+    & > img {
+      position: relative;
+      text-align: center;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    padding: 1rem;
+  }
+}

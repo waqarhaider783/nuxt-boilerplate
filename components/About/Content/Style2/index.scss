@@ -1,0 +1,30 @@
+@import '~styles/partials/theme.scss';
+
+.aboutContent {
+  text-align: center;
+
+  & h1,
+  & h2,
+  & h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    width: calc(50% - 2px);
+    padding: 10px;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

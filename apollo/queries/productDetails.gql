@@ -1,0 +1,55 @@
+query MyQuery($id: ID!) {
+  product(id: $id, idType: DATABASE_ID) {
+    id
+    databaseId
+    title
+    productsDetails {
+      category
+      image {
+        sourceUrl
+        mediaDetails {
+          sizes {
+            sourceUrl
+            height
+            width
+          }
+        }
+      }
+      overallRating {
+        grade
+        valueOne
+        valueTwo
+      }
+      attributes {
+        text
+        value
+      }
+      brand
+      content
+      moreAttributes {
+        content
+        averageRating {
+          text
+          value
+        }
+        labelHeading
+        labelRating {
+          text
+          value
+        }
+      }
+      conclusion
+    }
+    featuredImage {
+      node {
+        title
+        sourceUrl
+        mediaDetails {
+          sizes {
+            file
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '~styles/partials/theme.scss';
+
+.blogSmallThumb {
+  //   padding: 15px;
+  //   width: 33.33%;
+
+  .card {
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+
+    picture {
+      width: 100px;
+      height: 150px;
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .desc {
+      padding: 10px 20px;
+      flex: 1;
+
+      .title {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+        color: var(--primaryTextColor);
+        @include transition(all $transition ease-in);
+      }
+
+      .button {
+        padding-top: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primaryTextColor);
+        display: flex;
+        align-items: center;
+        @include transition(all $transition ease-in);
+
+        i {
+          color: var(--primaryColor);
+          padding-left: 8px;
+        }
+      }
+    }
+
+    &:hover {
+      .desc {
+        .title {
+          color: var(--primaryColor);
+        }
+
+        .button {
+          color: var(--primaryColor);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '~styles/partials/theme.scss';
+
+.anchor {
+  appearance: none;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 18px;
+  color: var(--greyColor);
+  line-height: 1.4em;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--borderColor);
+  background-color: transparent;
+  @include transition(
+    color $transition ease-in,
+    background-color $transition linear,
+    border $transition linear
+  );
+
+  //For Fit Content
+  display: inline-block;
+  width: intrinsic;
+  width: -webkit-fit-content;
+  width: -o-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  &-active,
+  &:focus,
+  &:hover {
+    color: var(--whiteTextColor);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+  }
+}

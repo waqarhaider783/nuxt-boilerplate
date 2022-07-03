@@ -1,0 +1,20 @@
+/**
+ 
+ * @author Ashish Ali <aashish.karowalia@va8ivedigital.com>
+ */
+
+@charset 'utf-8';
+
+//Fonts
+@import './partials/demo-theme/fonts.scss';
+
+//root Color Goes here..
+@import './partials/demo-theme/root-color.scss';
+
+// theme Variables Color and style
+@import './partials/theme.scss';
+
+// styling import using globally for pages
+@import './partials/import.scss';
+
+@import './partials/vue-vue-phone-number-input';

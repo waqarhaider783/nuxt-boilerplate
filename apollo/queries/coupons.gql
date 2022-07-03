@@ -1,0 +1,26 @@
+query getCoupons {
+  customCoupons {
+    edges {
+      node {
+        couponsCode {
+          addCouponDetails {
+            affiliateUrl
+            couponCode
+            deal
+            description
+            exclusive
+            expiry
+            fieldGroupName
+            storeUrl
+            title
+            verified
+            image {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+}

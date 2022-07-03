@@ -1,0 +1,134 @@
+@import '~styles/partials/theme.scss';
+
+.pet-banner-container {
+  position: relative;
+  margin-bottom: 30px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -10px;
+    background-color: var(--primaryColor);
+  }
+
+  .banner-image {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 81vh;
+    @media (min-width: 1600px) {
+      min-height: 100vh;
+    }
+
+    .content-box {
+      // position: absolute;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 25vh 0;
+      .text-content {
+        max-width: 800px;
+        width: 100%;
+        padding-top: 150px;
+        h1 {
+          font-size: 65px;
+          line-height: 80px;
+          padding-bottom: 65px;
+          font-weight: 800;
+          letter-spacing: 1.95px;
+          color: var(--whiteTextColor);
+        }
+        h2 {
+          font-size: 30px;
+          line-height: 40px;
+          color: var(--whiteTextColor);
+        }
+
+        .cta-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          a {
+            margin-right: 20px;
+            min-width: 250px;
+            height: 44px;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 0 30px;
+            text-align: center;
+            background-color: var(--greyColor);
+            color: var(--greyTextColor);
+            @include border-radius(3px);
+            @include flex-center();
+            @include transition(all $transition ease-in);
+
+            &:hover {
+              background-color: var(--primaryColor);
+              color: var(--whiteTextColor);
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pet-banner-container {
+    .banner-image {
+      align-items: center;
+      .content-box {
+        padding: 15vh 0;
+        .text-content {
+          padding-top: 50px;
+          h1 {
+            font-size: 50px;
+            line-height: 65px;
+            padding-bottom: 30px;
+          }
+          h2 {
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pet-banner-container {
+    .banner-image {
+      .content-box {
+        .text-content {
+          h1 {
+            font-size: 30px;
+            line-height: 45px;
+          }
+          h2 {
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+          .cta-buttons {
+            a {
+              margin: 0 10px 10px 0;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query MyQuery {
+  siteLogo {
+    altText
+    link
+    sourceUrl
+    mediaDetails {
+      sizes {
+        sourceUrl
+        width
+        name
+        height
+      }
+    }
+  }
+}

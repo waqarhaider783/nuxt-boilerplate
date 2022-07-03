@@ -1,0 +1,5 @@
+query MyQuery($v8_categoryId: Int) {
+  v8CategoryBy(v8_categoryId: $v8_categoryId) {
+    title
+  }
+}

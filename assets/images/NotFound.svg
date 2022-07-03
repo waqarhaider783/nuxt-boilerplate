@@ -1,0 +1,62 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="550"
+        height="501"
+        viewBox="0 0 550 501"
+      >
+        <g id="Group_4" data-name="Group 4" transform="translate(-745 -278)">
+          <text
+            id="Oops..._Page_Not_Found_"
+            data-name="Oops... Page Not Found!
+"
+            transform="translate(745 641)"
+            font-size="50"
+            font-family="SofiaPro-Bold, Sofia Pro"
+            font-weight="700"
+          >
+            <tspan x="0" y="0">Oops... Page Not Found!</tspan>
+            <tspan x="0" y="62"></tspan>
+          </text>
+          <text
+            id="Try_using_the_button_below_to_go_to_main_page_of_the_site_"
+            data-name="Try using the button below to go to main page of the site
+"
+            transform="translate(767 682)"
+            fill="#707070"
+            font-size="20"
+            font-family="SegoeUI, Segoe UI"
+          >
+            <tspan x="0" y="0">
+              Try using the button below to go to main page of the site
+            </tspan>
+            <tspan x="0" y="27"></tspan>
+          </text>
+          <g id="Group_2" data-name="Group 2" transform="translate(1)">
+            <g id="Group_1" data-name="Group 1" transform="translate(-5 99)">
+              <text
+                id="_404"
+                data-name="404"
+                transform="translate(788 454)"
+                fill="#707070"
+                font-size="264"
+                font-family="SofiaPro-Bold, Sofia Pro"
+                font-weight="700"
+                opacity="0.26"
+              >
+                <tspan x="0" y="0">404</tspan>
+              </text>
+              <text
+                id="_404-2"
+                data-name="404"
+                transform="translate(784 444)"
+                font-size="264"
+                font-family="SofiaPro-Bold, Sofia Pro"
+                font-weight="700"
+              >
+                <tspan x="0" y="0">404</tspan>
+              </text>
+            </g>
+          </g>
+          <g id="Group_3" data-name="Group 3" transform="translate(35 -22)"></g>
+        </g>
+      </svg>

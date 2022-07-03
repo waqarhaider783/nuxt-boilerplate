@@ -1,0 +1,18 @@
+query MyQuery {
+  pages(where: {title: "Call To Action"}) {
+    edges {
+      node {
+        callToActionStyle1 {
+          buttonTitle
+          buttonUrl
+          description
+          title
+          image {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

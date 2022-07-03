@@ -1,0 +1,125 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.reviewCard {
+  font-size: 16px;
+  max-width: 200px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    color: var(--primaryTextColor);
+    font-size: inherit;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    color: var(--primaryTextColor);
+    font-size: inherit;
+    font-weight: 600;
+    text-align: center;
+    padding: 3px;
+    border-radius: 50%;
+    text-transform: capitalize;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.circular-percentage-svg {
+  /* Grade Colors */
+  --A: #28a745;
+  --B: #73ae2d;
+  --C: #f0bb05;
+  --D: #f74f28;
+  --E: #f20045;
+}
+
+.A {
+  fill: var(--A);
+}
+.B {
+  fill: var(--B);
+}
+.C {
+  fill: var(--C);
+}
+.D {
+  fill: var(--D);
+}
+.E {
+  fill: var(--E);
+}
+
+.circular-chart {
+  display: inline-block;
+  max-width: 220px;
+
+  &__bg {
+    fill: var(--whiteTextColor);
+  }
+
+  &__bg-stroke {
+    fill: none;
+    stroke-width: 1px;
+    stroke: lightgrey;
+    stroke-linecap: round;
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 2;
+    stroke: $success;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+
+  &__percentage {
+    font-size: 0.6em;
+    font-weight: 600;
+    text-anchor: middle;
+  }
+
+  &__max-percentage {
+    fill: var(--greyTextColor);
+    font-size: 0.2em;
+    font-weight: 600;
+    text-anchor: middle;
+  }
+}
+
+.circle {
+  &-A {
+    stroke: var(--A) !important;
+  }
+  &-B {
+    stroke: var(--B) !important;
+  }
+  &-C {
+    stroke: var(--C) !important;
+  }
+  &-D {
+    stroke: var(--D) !important;
+  }
+  &-E {
+    stroke: var(--E) !important;
+  }
+}

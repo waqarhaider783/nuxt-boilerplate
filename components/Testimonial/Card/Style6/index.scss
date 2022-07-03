@@ -1,0 +1,70 @@
+@import '~assets/scss/partials/theme.scss';
+
+.testimonialCard {
+  font-size: 14px;
+  color: var(--blackTextColor);
+  padding: 30px;
+  border-radius: 10px;
+  @include box-shadow(0, 3px, 10px, 0, rgba(0, 0, 0, 0.16));
+
+  &__quote {
+    position: relative;
+    line-height: 1.4;
+    text-align: left;
+    padding-top: 75px;
+    padding-bottom: 30px;
+
+    &::before {
+      content: '';
+      display: inline;
+      position: absolute;
+      left: 0;
+      top: 0;
+      // ../../../../assets/images/svgs/open-quote1.svg
+      mask: url('../../../../assets/images/svgs/open-quote2.svg')
+        no-repeat 50% 85%;
+      mask-size: cover;
+      height: 72px;
+      width: 72px;
+      background-color: lighten($primaryColor, 30);
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+
+  &__authorDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+
+  &__image {
+    width: 78px;
+    height: 78px;
+    padding: 0;
+    border: 3px solid var(--whiteTextColor);
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+
+  &__subTitle {
+    font-size: 14px;
+  }
+}

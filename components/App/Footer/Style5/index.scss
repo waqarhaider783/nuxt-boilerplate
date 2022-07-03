@@ -1,0 +1,160 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.shapingnutrition-footer {
+  background-color: black;
+  padding: 70px 0 40px;
+  margin-top: 50px;
+}
+
+.shapingnutrition-quickLinks {
+  flex: 1;
+  padding: 0 15px;
+
+  .footerLinks {
+    width: calc(100% / 5);
+    padding: 0 15px;
+
+    h4,
+    h5 {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 12px;
+      color: var(--secondaryColor);
+      text-transform: uppercase;
+
+      svg {
+        display: block;
+        margin: 10px 0 0;
+        path {
+          stroke: var(--primaryColor);
+        }
+      }
+    }
+
+    ul {
+      li {
+        padding: 0 0;
+
+        a {
+          font-size: 16px;
+          color: var(--whiteTextColor);
+          line-height: 28px;
+          font-weight: 300;
+          display: inline-block;
+          @include transition(all 0.5s ease-in);
+          &:hover {
+            color: var(--secondaryColor);
+          }
+        }
+      }
+
+      &.social-Links {
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          a {
+            padding: 0 5px;
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+            i {
+              font-size: 16px;
+              line-height: 28px;
+            }
+            &:hover {
+              color: var(--secondaryColor);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.shapingnutrition-copyright {
+  background-color: var(--darkGreyColor);
+  padding: 37px 0;
+  margin-top: 70px;
+
+  .copyright-main {
+    justify-content: space-between;
+    align-items: center;
+    .footer-logo {
+      padding: 0 15px;
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+    .cards-accepts {
+      padding: 0 15px;
+      margin: 20px 0;
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+    .copyright-text {
+      padding: 0 15px;
+      color: var(--whiteTextColor);
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+}
+@media (max-width: 768px) {
+  .shapingnutrition-quickLinks {
+    .footerLinks {
+      width: calc(100% / 3);
+      padding-bottom: 30px;
+      h4,
+      h5 {
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 8px;
+      }
+      ul {
+        li {
+          a {
+            font-size: 13px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .shapingnutrition-footer {
+    padding: 40px 0 30px;
+  }
+  .shapingnutrition-quickLinks {
+    .footerLinks {
+      width: calc(100% / 2);
+      padding-bottom: 30px;
+      h4,
+      h5 {
+        font-size: 15px;
+        line-height: 17px;
+        padding-bottom: 8px;
+      }
+      ul {
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

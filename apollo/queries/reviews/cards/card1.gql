@@ -1,0 +1,15 @@
+query MyQuery {
+  reviews {
+    edges {
+      node {
+        reviewCardStyle1 {
+          reviewBoxCardStyle1 {
+            circleRangeCardStyle1
+            ratingNumberCardStyle1
+            ratingTitleCardStyle1
+          }
+        }
+      }
+    }
+  }
+}

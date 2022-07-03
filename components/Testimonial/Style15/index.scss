@@ -1,0 +1,114 @@
+@import '~/assets/scss/partials/theme.scss';
+.testimonial {
+  display: flex;
+  background: transparent;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  .info {
+    width: 50%;
+    position: relative;
+    .about {
+      border-radius: 50px;
+      max-width: 80%;
+      .about-user {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 40%;
+        h3 {
+          font-size: 28px;
+          line-height: 1.25em;
+          width: min-content;
+          font-weight: 800;
+        }
+        span {
+          width: max-content;
+          font-size: 12px;
+          line-height: 1.5em;
+        }
+        .rating {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $gray-400;
+
+          &--rated {
+            color: #ecd32f;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+        background: $white;
+        border-radius: 50px;
+      }
+    }
+    .img-wrapper {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-34%);
+      img {
+        right: 0;
+        border-radius: 25px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .desc {
+    width: 50%;
+    padding-left: 35px;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $blackTextColor;
+  }
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    .info {
+      width: 75%;
+    }
+    .desc {
+      width: 85%;
+      margin: auto;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 768px) and (min-width: 635px) {
+    .info {
+      width: 60%;
+    }
+  }
+  @media (max-width: 450px) {
+    .info {
+      .about {
+        section {
+          h2 {
+            font-size: 22px;
+          }
+        }
+        img {
+          border-radius: 20px;
+        }
+      }
+      .img-wrapper {
+        width: 40%;
+        transform: translateY(-40%);
+        img {
+          border-radius: 15px;
+        }
+      }
+    }
+    .desc {
+      padding: 10px;
+
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.create-account {
+  display: flex;
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--whiteTextColor);
+  max-width: 1215px;
+  margin: auto;
+  height: 95vh;
+  min-width: 60vw;
+
+  .left,
+  .right {
+    width: 50%;
+  }
+  .main-wrp {
+    z-index: 1;
+  }
+}
+.right {
+  background: var(--whiteTextColor);
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+  &_inner {
+    height: fit-content;
+    width: 85%;
+    margin: auto;
+  }
+  .title {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    color: var(--blackTextColor);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--greyTextColor);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+  .close {
+    color: var(--gray-500);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .rights {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--gray-500);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .login {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--blackTextColor);
+    margin: 1rem auto;
+    a {
+      color: var(--primaryColor);
+      font-weight: 500;
+    }
+  }
+  .max-wrapper {
+    max-width: 320px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .create-account {
+    padding: 10px;
+  }
+  .right {
+    .rights,
+    .login {
+      font-size: 0.85rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .create-account {
+    flex-direction: column;
+    padding: 0;
+    height: fit-content;
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left {
+      border-radius: 15px 15px 0 0;
+      .color-layer {
+        border-radius: 15px 15px 0 0;
+      }
+    }
+    .right {
+      border-radius: 15px 15px 0 0;
+      width: 90%;
+      margin: auto;
+      &_inner {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .title {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+      .subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .rights,
+      .login {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

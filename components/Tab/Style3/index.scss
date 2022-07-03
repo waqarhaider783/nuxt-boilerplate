@@ -1,0 +1,83 @@
+@import '~styles/partials/theme.scss';
+
+.tabs-list {
+  background-color: var(--greyTextColor);
+  padding: 0 2rem;
+}
+.tabs {
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 35px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__links {
+    color: var(--primaryTextColor);
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.57143rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    position: relative;
+    @include transition(color $transition ease);
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: solid 2px var(--secondaryColor);
+      height: 5px;
+      width: 0%;
+      transform: translateX(-5%);
+      @include transition(
+        width $transition ease,
+        border-bottom $transition ease
+      );
+    }
+
+    &:active::after,
+    &:focus::after,
+    &:hover::after {
+      width: 110%;
+      border-bottom: solid 2px var(--secondaryColor);
+    }
+
+    &--light {
+      color: var(--whiteTextColor);
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: rgba($whiteTextColor, 0.8);
+      }
+
+      &::after {
+        border-bottom: solid 2px var(--whiteTextColor);
+      }
+
+      &.active::after,
+      &:focus::after,
+      &:hover::after {
+        border-bottom: solid 2px rgba($whiteTextColor, 0.8);
+      }
+    }
+
+    &-active {
+      color: var(--secondaryColor);
+
+      &::after {
+        width: 105%;
+        border-bottom: solid 2px var(--secondaryColor);
+      }
+    }
+  }
+}

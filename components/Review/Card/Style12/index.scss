@@ -1,0 +1,152 @@
+@import '@/assets/scss/partials/theme.scss';
+// grade Colors
+.graph {
+  &__graphics {
+    --A: #28a745;
+    --B: #73ae2d;
+    --C: #f0bb05;
+    --D: #f74f28;
+    --E: #f20045;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 35px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+
+    .circular-percentage-svg {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        display: inline;
+      }
+      @media (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .vertical-bars-svg {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .bar {
+        fill: lightgrey;
+        font-size: 33px;
+        font-family: OpenSans-Bold, Open Sans;
+        font-weight: 700;
+      }
+
+      .A {
+        fill: var(--A);
+        color: var(--A);
+        stroke: var(--A);
+      }
+      .B {
+        fill: var(--B);
+        color: var(--B);
+        stroke: var(--B);
+      }
+      .C {
+        fill: var(--C);
+        color: var(--C);
+        stroke: var(--C);
+      }
+      .D {
+        fill: var(--D);
+        color: var(--D);
+        stroke: var(--D);
+      }
+      .E {
+        fill: var(--E);
+        color: var(--E);
+        stroke: var(--E);
+      }
+    }
+
+    .A {
+      fill: var(--A);
+    }
+    .B {
+      fill: var(--B);
+    }
+    .C {
+      fill: var(--C);
+    }
+    .D {
+      fill: var(--D);
+    }
+    .E {
+      fill: var(--E);
+    }
+
+    .circular-chart {
+      display: inline-block;
+      max-width: 220px;
+
+      &__bg {
+        fill: var(--whiteTextColor);
+      }
+
+      &__bg-stroke {
+        fill: none;
+        stroke-width: 1px;
+        stroke: lightgrey;
+        stroke-linecap: round;
+      }
+
+      &__circle {
+        fill: none;
+        stroke-width: 2;
+        stroke: $success;
+        stroke-linecap: round;
+        animation: progress 1s ease-out forwards;
+      }
+
+      &__percentage {
+        font-size: 0.6em;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+
+      &__max-percentage {
+        fill: var(--greyTextColor);
+        font-size: 0.2em;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+    }
+  }
+}
+
+.circle {
+  &-A {
+    stroke: var(--A) !important;
+  }
+  &-B {
+    stroke: var(--B) !important;
+  }
+  &-C {
+    stroke: var(--C) !important;
+  }
+  &-D {
+    stroke: var(--D) !important;
+  }
+  &-E {
+    stroke: var(--E) !important;
+  }
+}

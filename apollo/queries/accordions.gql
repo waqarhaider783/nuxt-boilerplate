@@ -1,0 +1,22 @@
+query MyQuery {
+  pages(where: { title: "accordion" }) {
+    edges {
+      node {
+        id
+        accordionSection1 {
+          accordion {
+            question
+            answer
+          }
+        }
+        accordionStyle2 {
+          title
+          questionStyle2
+          answersStyle2 {
+            answers
+          }
+        }
+      }
+    }
+  }
+}

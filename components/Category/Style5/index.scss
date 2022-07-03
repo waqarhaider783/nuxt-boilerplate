@@ -1,0 +1,48 @@
+@import '~styles/partials/theme.scss';
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  & > picture {
+    background: var(--whiteTextColor);
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: auto;
+    height: 100%;
+  }
+
+  & > span {
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    color: var(--whiteTextColor);
+    @include transition(all $transition linear);
+  }
+
+  &:hover span {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+
+  & > span,
+  &__image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+  }
+}

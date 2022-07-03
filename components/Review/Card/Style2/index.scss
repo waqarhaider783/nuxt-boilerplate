@@ -1,0 +1,235 @@
+@import '~assets/scss/partials/theme.scss';
+
+.reviewCard {
+  &__explore {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--blackTextColor);
+  }
+  &__title {
+    position: relative;
+  }
+
+  &__headingTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 19px;
+    padding: 10px 30px;
+    width: max-content;
+    border-bottom-right-radius: 50px;
+    background: var(--gray-600);
+    color: var(--whiteTextColor);
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding: 60px 20px 20px 20px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      padding: 50px 5px 5px 5px;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      align-items: flex-start;
+      flex: 1 1 60%;
+      padding: 0 10px;
+    }
+  }
+  &__first {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    @media (max-width: 992px) {
+      padding-bottom: 0px;
+      flex-direction: row;
+    }
+  }
+  &__image {
+    position: relative;
+    height: 0;
+    width: 100px;
+    padding: 0 0 100px 0;
+    & > img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: contain;
+      object-position: center;
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__ratingNumber {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+    @media (max-width: 992px) {
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.2;
+      padding-bottom: 15px;
+      padding-right: 10px;
+    }
+  }
+  &__rating {
+    padding-top: 20px;
+    @media (max-width: 992px) {
+      padding-top: 0px;
+    }
+  }
+  &__second {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0px;
+    }
+  }
+  &__heading {
+    text-align: left;
+  }
+  &__titlePrice {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+    padding-bottom: 15px;
+    @media (max-width: 992px) {
+      padding-bottom: 5px;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+  }
+  &__titleName {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+    padding-bottom: 10px;
+    @media (max-width: 992px) {
+      padding-bottom: 5px;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+  }
+  &__list {
+    list-style: disc;
+    padding-left: 20px;
+    padding-top: 20px;
+    & > li {
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 300;
+      color: var(--blackTextColor);
+      @media (max-width: 992px) {
+        font-size: 13px;
+        line-height: 1.2;
+      }
+    }
+    @media (max-width: 992px) {
+      padding-top: 5px;
+    }
+  }
+  &__third {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    @media (max-width: 992px) {
+      order: 3;
+      flex-basis: 100%;
+      padding: 20px 0;
+    }
+  }
+  &__btn {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: var(--primaryColor);
+    color: var(--whiteTextColor);
+    cursor: pointer;
+    border: 1px solid var(--primaryColor);
+  }
+  &__imageTwo {
+    position: relative;
+    width: 130px;
+    padding: 0px 0 100px 0;
+    height: 0;
+
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__detail {
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 300;
+    text-align: center;
+    color: var(--blackTextColor);
+    @media (max-width: 992px) {
+      font-size: 13px;
+      line-height: 1.2;
+    }
+  }
+  &__imageThird {
+    position: relative;
+    width: 150px;
+    height: 0;
+    padding: 0 0 150px 0;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__fourth {
+    padding: 0 20px;
+    @media (max-width: 992px) {
+      order: 1;
+      display: flex;
+      flex: 1 1 40%;
+      padding: 0 10px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--greyTextColor);
+
+    &--rated {
+      color: #ecd32f;
+    }
+  }
+}

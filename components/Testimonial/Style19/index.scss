@@ -1,0 +1,37 @@
+@import '~/assets/scss/partials/theme.scss';
+.testimonial {
+  text-align: center;
+  color: $white;
+  padding: 160px 120px;
+  position: relative;
+  .heading {
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: 600;
+  }
+  .description {
+    font-size: 25px;
+    line-height: 1.5em;
+    padding: 40px 0;
+    max-width: 1096px;
+    margin: auto;
+  }
+  .designation {
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: 500;
+  }
+
+  .background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 20px;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle3 {
+          contentBoxCardStyle3 {
+            btn1LnkCardStyle3
+            btn1TxtCardStyle3
+            btn2LinkCardStyle3
+            btn2TxtCardStyle3
+            ratingBoxCardStyle3
+            starsCardStyle3
+            imageBoxCardStyle3 {
+              sourceUrl
+              altText
+            }
+            likeTitleCardStyle3
+            likeListCardStyle3 {
+              likeItemBoxStyle3
+            }
+            dontLikeTitleCardStyle3
+            dontLikeListCardStyle3 {
+              dontLikeItemBoxStyle3
+            }
+            titleBoxCardStyle3
+            listItemCardStyle3 {
+              itemStyle3
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+query MyQuery {
+  posts {
+    edges {
+      node {
+        id
+        featuredImage {
+          node {
+            sourceUrl
+            altText
+          }
+        }
+        date
+        title
+        excerpt
+        slug
+        author {
+          node {
+            name
+          }
+        }
+        tags {
+          edges {
+            node {
+              name
+            }
+          }
+        }
+        categories {
+          edges {
+            node {
+              name
+              categoryImage {
+                catImage {
+                  id
+                  altText
+                  sourceUrl
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

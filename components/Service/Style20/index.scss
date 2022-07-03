@@ -1,0 +1,58 @@
+@import '~assets/scss/partials/theme.scss';
+
+.services {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 2rem;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__btn {
+    width: fit-content;
+    margin-top: 1rem;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    color: var(--primaryColor);
+  }
+  &__cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+  &__heading {
+    text-align: left;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    direction: ltr;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    text-align: right;
+  }
+
+  &__card.reverse {
+    direction: rtl;
+  }
+  .reverse &__heading {
+    align-items: flex-end;
+  }
+
+  .reverse &__image {
+    text-align: left;
+  }
+}

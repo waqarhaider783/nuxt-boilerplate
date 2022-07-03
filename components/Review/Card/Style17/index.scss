@@ -1,0 +1,80 @@
+@import '~assets/scss/partials/theme.scss';
+
+.reviewCard {
+  &__wrapper {
+  }
+  &__block {
+    display: flex;
+    &__right {
+      width: 70%;
+    }
+    &__left {
+      position: relative;
+      width: 30%;
+      background: var(--primaryColor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__line {
+        content: '';
+        width: 8px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: yellow;
+        border-radius: 9px;
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 1em;
+        font-weight: 500;
+      }
+    }
+    &__right {
+      display: grid;
+      padding: 28px;
+      background-color: pink;
+      grid-template-columns: 20fr 80fr;
+
+      grid-gap: 10px;
+      border-radius: 9px;
+      &__pic {
+        margin-right: 34px;
+        border-radius: 9px;
+
+        width: 138px;
+
+        picture {
+          width: 138px;
+          img {
+            border-radius: 9px;
+            height: 138px;
+            width: 138px;
+          }
+        }
+      }
+      &__text {
+        &__title {
+          color: purple;
+          font-size: 22px;
+          line-height: 1em;
+          font-weight: 600;
+          margin-bottom: 19px;
+        }
+        &__text {
+          font-size: 18px;
+          line-height: 1em;
+          margin-top: 14px;
+        }
+        &__icon {
+          width: 33px;
+          height: 33px;
+          display: block;
+          border-radius: 50%;
+          font-size: 34px;
+        }
+      }
+    }
+  }
+}

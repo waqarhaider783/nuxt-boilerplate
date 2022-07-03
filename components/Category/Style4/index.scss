@@ -1,0 +1,24 @@
+@import '~styles/partials/theme.scss';
+
+.card {
+  padding: 25px 60px;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px 0 rgba(65, 65, 65, 0.3);
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover {
+    box-shadow: 0 3px 12px 0 rgba(65, 65, 65, 0.45);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+}

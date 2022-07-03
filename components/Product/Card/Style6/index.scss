@@ -1,0 +1,50 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.product {
+  &.card {
+    vertical-align: top;
+    padding: 40px 10px;
+    &.alignment {
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
+    }
+    h2,
+    h3,
+    h4,
+    span,
+    .title {
+      font-size: 20px;
+      color: #333;
+      font-weight: 600;
+    }
+    .details-block-container {
+      margin-top: 40px;
+      text-align: inherit;
+      * {
+        text-align: inherit;
+        letter-spacing: 1px;
+      }
+    }
+    .price {
+      color: $greyTextColor;
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+    .promotional-text {
+      font-weight: 600;
+    }
+    .promotion-title {
+      color: #ff1616;
+    }
+  }
+}
+@media only screen and (min-width: 1023px) {
+}

@@ -1,0 +1,15 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle12 {
+          reviewBoxCardStyle12 {
+            alphaRatingCardStyle12
+            circleRangeCardStyle12
+            ratingNumberCardStyle12
+          }
+        }
+      }
+    }
+  }
+}

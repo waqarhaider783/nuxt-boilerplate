@@ -1,0 +1,135 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.vape-heading {
+  --shs: 18px;
+  --shw: 600;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  @media (min-width: 992px) {
+    --shs: 30px;
+    --shw: 700;
+  }
+
+  &.left {
+    text-align: left;
+    align-items: flex-start;
+    .title {
+      text-align: left;
+    }
+
+    .subTitle {
+      max-width: unset;
+      margin: 10px;
+    }
+  }
+
+  &.white {
+    color: var(--whiteTextColor);
+    .sub-title {
+      color: var(--whiteTextColor);
+      max-width: unset;
+    }
+  }
+
+  .title {
+    font-weight: var(--shw);
+    font-size: var(--shs);
+    margin: 0;
+    text-align: center;
+  }
+
+  .title + * {
+    margin-top: 10px;
+  }
+
+  & + .evts {
+    margin-top: -10px;
+  }
+
+  .subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 640px;
+    margin: 10px auto;
+    color: var(--primaryTextColor);
+  }
+
+  .shlnk {
+    color: var(--secondaryColor);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    @include transition(color $transition linear);
+
+    &:before,
+    &:after {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background-color: var(--secondaryColor);
+      @include transition(background-color $transition linear);
+    }
+
+    &:before {
+      margin-right: 15px;
+    }
+
+    &:after {
+      margin-left: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--primaryColor);
+      &:before,
+      &:after {
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+.vape-sidebar-heading {
+  --shs: 18px;
+  --shw: 700;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 25px;
+
+  @media (min-width: 992px) {
+    --shs: 24px;
+  }
+  .title {
+    font-weight: var(--shw);
+    font-size: var(--shs);
+    margin: 0;
+    text-transform: capitalize;
+    + * {
+      margin-top: 10px;
+    }
+
+    span {
+      color: var(--primaryColor);
+    }
+  }
+  svg {
+    path {
+      stroke: var(--primaryColor);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .vape-heading {
+    margin-bottom: 15px;
+  }
+  .vape-sidebar-heading {
+    margin-bottom: 15px;
+  }
+}

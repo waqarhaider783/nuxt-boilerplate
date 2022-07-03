@@ -1,0 +1,172 @@
+@import '~styles/partials/theme.scss';
+
+.couponCard {
+  display: grid;
+  grid-template-columns: min-content minmax(0, 1fr);
+
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 0 rgb(0 0 0 / 20%);
+  @include transition(all $transition linear);
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 100%;
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    padding: 20px;
+    background-color: var(--secondaryColor);
+    border-right: 1px dashed var(--primaryColor);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      margin: auto;
+      background-color: unset;
+      border-right: 0;
+      border-bottom: 1px dashed var(--primaryColor);
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__textWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    max-height: fit-content;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--blackTextColor);
+    font-weight: 400;
+    padding: 0 0 15px;
+    margin: 0;
+  }
+
+  &__ctaWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+
+    & > * {
+      flex: 1 1;
+    }
+  }
+
+  &__expiry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--blackTextColor);
+    font-size: 12px;
+    padding: 10px 20px 10px 0;
+    // margin: 0 -10px;
+
+    @media screen and (max-width: 640px) {
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    &__item {
+      display: flex;
+      padding: 0 10px;
+
+      @media screen and (max-width: 640px) {
+        padding: 0;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 14px;
+      color: var(--blackTextColor);
+      margin-right: 5px;
+    }
+
+    &__text {
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+
+  &__btnWrapper {
+    & > * {
+      // width: 100%;
+      margin-left: auto;
+    }
+  }
+}
+
+.vertical.couponCard {
+  grid-template-columns: minmax(0, 1fr);
+  // max-width: 320px;
+}
+
+.vertical {
+  .couponCard {
+    &__figure {
+      width: 100%;
+      margin: auto;
+      background-color: unset;
+      border-right: 0;
+      border-bottom: 1px dashed var(--primaryColor);
+    }
+
+    &__ctaWrapper {
+      flex-direction: column;
+    }
+
+    &__expiry {
+      justify-content: space-between;
+      padding: 15px 0;
+
+      &__item {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+query MyQuery($slug: String!) {
+  brandBy(slug: $slug) {
+    slug
+    brandInformation {
+      products
+    }
+  }
+}

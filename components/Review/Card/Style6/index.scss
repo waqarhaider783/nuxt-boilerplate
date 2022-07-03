@@ -1,0 +1,184 @@
+@import '~assets/scss/partials/theme.scss';
+.reviewCard {
+  &__box {
+    background: var(--whiteTextColor);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  }
+  &__card {
+    padding: 20px;
+    border: 2px dashed var(--success);
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 20px;
+    justify-items: flex-start;
+    align-items: center;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-gap: 0px;
+    }
+  }
+  &__imageBlock {
+    padding: 20px;
+    @media (max-width: 992px) {
+      padding: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__image {
+    position: relative;
+    width: 150px;
+    height: 0;
+    padding: 0 0 150px 0;
+    & > img {
+      top: 0;
+      object-position: center;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  &__verifyText {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__verify {
+    padding-right: 5px;
+    font-size: 16px;
+    padding-top: 5px;
+  }
+  &__textOne {
+    padding-right: 10px;
+    color: var(--success);
+    font-size: 14px;
+    line-height: 14px;
+    padding-top: 5px;
+  }
+  &__textTwo {
+    border: 1px solid var(--danger);
+    background: var(--danger);
+    color: var(--whiteTextColor);
+    padding: 3px;
+    text-transform: uppercase;
+    width: max-content;
+  }
+  &__titleDesc {
+    padding: 10px 0;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    line-height: 18px;
+  }
+  &__desc {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px 0;
+    text-transform: capitalize;
+    color: var(--lightGreyColor);
+  }
+  &__icons {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &__userIconText {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 992px) {
+      padding-right: 0;
+      padding-bottom: 10px;
+    }
+  }
+  &__user {
+    padding-right: 10px;
+  }
+  &__userText {
+    font-size: 14px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--lightGreyColor);
+  }
+  &__toggleIconText {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 992px) {
+      padding-right: 0;
+      padding-bottom: 10px;
+    }
+  }
+  &__toggle {
+    padding-right: 10px;
+  }
+  &__toggleText {
+    font-size: 14px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--lightGreyColor);
+  }
+  &__clockIconText {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 992px) {
+      padding-right: 0;
+    }
+  }
+  &__clock {
+    padding-right: 10px;
+  }
+  &__clockText {
+    font-size: 14px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--lightGreyColor);
+  }
+  &__ratingButton {
+    display: flex;
+    flex-direction: column;
+  }
+  &__ratingTitle {
+    font-size: 17px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  &__rating {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+    &--rated {
+      color: #ecd32f;
+    }
+  }
+
+  &__ratingNumber {
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 14px;
+  }
+  &__activateButton {
+    font-size: 14px;
+    line-height: 1.5;
+    background: var(--success);
+    font-weight: 400;
+    color: var(--whiteTextColor);
+    border: 1px solid var(--success);
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+}

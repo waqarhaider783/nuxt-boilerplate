@@ -1,0 +1,20 @@
+query MyQuery {
+  pages(where: { title: "testimonial" }) {
+    edges {
+      node {
+        testimonialStyle1 {
+          testimonial {
+            designation
+            avatar {
+              altText
+              sourceUrl
+            }
+            message
+            name
+            title
+          }
+        }
+      }
+    }
+  }
+}

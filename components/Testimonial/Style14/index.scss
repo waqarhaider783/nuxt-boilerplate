@@ -1,0 +1,81 @@
+@import '~/assets/scss/partials/theme.scss';
+.testimonial {
+  background: $gray-300;
+  color: $blackTextColor;
+  padding: 50px;
+  max-width: 526px;
+  width: 100%;
+  margin: auto;
+  .tagline {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 40px;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    .img-wrapper {
+      margin-right: 30px;
+      height: 84px;
+      width: 84px;
+      img {
+        border-radius: 50%;
+        max-width: 100%;
+      }
+    }
+    section {
+      .name {
+        font-size: 26px;
+        line-height: 39px;
+      }
+      .description {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 15px 0;
+      }
+      .project {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 5px 0;
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    padding: 25px;
+    .tagline {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 30px;
+    }
+    .info {
+      .img-wrapper {
+        margin-right: 20px;
+        width: 65px;
+        height: 65px;
+      }
+      section {
+        .name {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 15px;
+    .tagline {
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+    .info {
+      .img-wrapper {
+        margin-right: 10px;
+      }
+      section {
+        .name {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

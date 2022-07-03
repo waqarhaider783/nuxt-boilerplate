@@ -1,0 +1,27 @@
+@import '~styles/partials/theme.scss';
+
+.anchor {
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+
+  font-size: 18px;
+  line-height: 1.4em;
+  color: var(--borderColor);
+  text-align: center;
+  background-color: transparent;
+  @include transition(color $transition linear);
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    color: darken($borderColor, 25%);
+  }
+}

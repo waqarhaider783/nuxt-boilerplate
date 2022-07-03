@@ -1,0 +1,182 @@
+/**
+ 
+ * @author Ashish Ali <aashish.karowalia@va8ivedigital.com>
+ */
+
+body {
+  background-color: body(background-color);
+  color: body(color);
+  font-family: $font-family;
+  font-size: 14px;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--primaryColor);
+}
+
+sub {
+  vertical-align: top;
+  font-size: smaller;
+}
+
+p a,
+p strong {
+  display: inline-block;
+  vertical-align: top;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: top;
+  outline: none;
+  color: var(--lightGreyColor);
+  font-size: 14px;
+
+  @include placeholder {
+    color: #dddfdf;
+  }
+}
+
+input,
+select,
+textarea,
+button {
+  @include font();
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bodyColor);
+  @include transition($transition linear);
+
+  &.gray {
+    background: var(--lightGreyColor);
+  }
+}
+
+// Container
+.wrapper,
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1640px;
+  margin: 0 auto;
+  &.mobile-full {
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+  &.min {
+    max-width: 1220px;
+  }
+}
+
+// Max Container
+.wrapper-fluid,
+.container-fluid {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+//grid
+[class*='grid'] {
+  display: grid;
+}
+
+// Flex
+[class*='flex'] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//Align perfect Center
+[class*='Vhc'] {
+  @include flex-center;
+}
+
+// Flex Direction Column
+[class*='Dc'] {
+  flex-direction: column;
+}
+
+// Flex row reverse
+[class*='Rv'] {
+  flex-direction: row-reverse;
+}
+
+.rowbar5 {
+  margin: 0 calc(-1 * var(--spacing5));
+}
+.rowbar10 {
+  margin: 0 calc(-1 * var(--spacing10));
+}
+.rowbar {
+  margin: 0 calc(-1 * var(--spacing));
+}
+
+.offset5 {
+  margin: calc(-1 * var(--spacing5));
+}
+.offset10 {
+  margin: calc(-1 * var(--spacing10));
+}
+.offset {
+  margin: calc(-1 * var(--spacing));
+}
+
+.section {
+  &:not(.no-padding) {
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
+  }
+  &.padding-bottom-none {
+    padding-bottom: 0;
+  }
+  &.padding-top-none {
+    padding-top: 0;
+  }
+}
+
+/* ================================================================
+      Global Class which are extended in projects 
+=================================================================== */
+
+.flex-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: row;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// vue-tel-input styling
+// .vue-tel-input {
+//   padding: 5px 20px;
+//   // background-color: red;
+//   &::v-deep(.vti__input) {
+//     color: yellow;
+//   }
+// }

@@ -1,0 +1,122 @@
+@import '~assets/scss/partials/theme.scss';
+
+.glowInput {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--greyTextColor);
+  margin: 0;
+  padding: 10px 15px;
+  line-height: 2;
+  background-color: var(--borderColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 0;
+
+  &:focus,
+  &:hover {
+    border: 1px solid var(--primaryColor);
+  }
+
+  /* Place Holder CSS */
+  &::-webkit-input-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:-moz-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &::-moz-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  /* Place Holder CSS for Hover */
+  &:hover::-webkit-input-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover:-moz-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover::-moz-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover:-ms-input-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  /* Place Holder CSS for Focus */
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+}
+
+.cartAction {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  & label {
+    margin-right: 25px;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  & input {
+    padding: 10px 35px 10px 15px;
+  }
+
+  &__ctaIcon {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    font-size: 16px;
+    color: var(--blackTextColor);
+    transform: rotate(270deg);
+    @include transition(all $transition linear);
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: var(--primaryColor);
+      cursor: pointer;
+    }
+  }
+}

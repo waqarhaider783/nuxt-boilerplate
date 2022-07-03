@@ -1,0 +1,21 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle10 {
+          reviewBoxCardStyle10 {
+            descriptionCardStyle10
+            productTitleCardStyle10
+            subTitleCardStyle10
+            titleCardStyle10
+            listItemCardStyle10 {
+              labelCardStyle10
+              ratingCardStyle10
+              valueCardStyle10
+            }
+          }
+        }
+      }
+    }
+  }
+}

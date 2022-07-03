@@ -1,0 +1,63 @@
+@import '~styles/partials/theme.scss';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primaryTextColor);
+    padding: 17px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e6e6e6;
+    cursor: pointer;
+    outline: none;
+    @include transition(background-color $transition ease);
+
+    &:hover,
+    &.active {
+      background-color: var(--primaryColor);
+    }
+
+    &:hover &__title,
+    &.active &__title {
+      color: var(--whiteTextColor);
+    }
+
+    &:hover &__icon,
+    &.active &__icon {
+      color: var(--whiteTextColor);
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &__icon {
+      transform: rotate(-90deg);
+      @include transition(transform $transition ease);
+
+      &--rotate {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__content {
+    background-color: var(--whiteTextColor);
+    overflow: auto;
+    @include transition(max-height $transition ease);
+
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+      padding: 15px 15px 0;
+      color: var(--primaryTextColor);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle4 {
+          reviewBoxCardStyle4 {
+            buttonLinkCardStyle4
+            buttonTextCardStyle4
+            contentCardStyle4
+            descriptionCardStyle4
+            fieldGroupName
+            headingCardStyle4
+            priceCardStyle4
+            subTitleCardStyle4
+            titleCardStyle4
+            imgeCardStyle4 {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+}

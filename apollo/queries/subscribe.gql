@@ -1,0 +1,27 @@
+query MyQuery {
+  pages(where: { name: "subscribe" }) {
+    edges {
+      node {
+        id
+        subscribeStyle1 {
+          description
+          fieldGroupName
+          description
+          heading
+        }
+        subscribeStyle4 {
+          aboutUs {
+            description
+            fieldGroupName
+            title
+          }
+          newsletter {
+            description
+            fieldGroupName
+            title
+          }
+        }
+      }
+    }
+  }
+}

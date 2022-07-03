@@ -1,0 +1,19 @@
+@import '~styles/partials/theme.scss';
+
+.aboutContent {
+  text-align: center;
+
+  & h1,
+  & h2,
+  & h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+}

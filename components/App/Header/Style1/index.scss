@@ -1,0 +1,238 @@
+@import '~styles/partials/theme.scss';
+
+.header {
+  position: relative;
+  background-color: var(--whiteTextColor);
+
+  &__top {
+    position: relative;
+    padding: 15px 0;
+    box-shadow: 0 1px 4px 1px rgb(0 0 0 / 21%);
+    // background-image: url('../../../../assets/images/header_pattern.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primaryColor, 0.5);
+    }
+  }
+
+  &__flex {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
+  }
+
+  &__icons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteTextColor);
+    color: var(--primaryColor);
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    z-index: 1;
+
+    @media screen and (max-width: 979px) {
+      display: flex;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__logoBox {
+    max-width: 220px;
+    padding: 0 15px;
+
+    @media screen and (max-width: 480px) {
+      width: 70%;
+      max-width: 70%;
+    }
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__navigation {
+    background-color: var(--whiteTextColor);
+    box-shadow: 0px 0px 8px 1px rgb(1 1 1 / 30%);
+
+    @media screen and (max-width: 979px) {
+      background-color: var(--primaryColor);
+    }
+
+    @media screen and (max-width: 979px) {
+      position: absolute;
+      top: 0;
+      left: -280px;
+      z-index: 19;
+      height: 100vh;
+      width: 250px;
+      overflow: hidden;
+      @include transition(all $transition linear);
+    }
+
+    &--open {
+      @media screen and (max-width: 979px) {
+        left: 0;
+      }
+    }
+
+    &__closeBtn {
+      display: none;
+      justify-content: flex-end;
+      padding: 10px;
+      color: var(--whiteTextColor);
+
+      @media screen and (max-width: 979px) {
+        display: flex;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      @media screen and (max-width: 979px) {
+        display: block;
+        height: calc(100% - 70px);
+        padding: 0;
+        overflow-y: auto;
+      }
+    }
+
+    &__links {
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+      padding: 15px;
+      color: var(--primaryTextColor);
+      text-transform: capitalize;
+      @include transition(
+        color $transition linear,
+        background-color $transition linear
+      );
+
+      @media (max-width: 979px) {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--whiteTextColor);
+        margin: 0;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-top: 1px solid var(--secondaryColor);
+        border-bottom: 1px solid var(--primaryColor);
+        @include transition(all $transition ease);
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--whiteTextColor);
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+.search {
+  &__panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    padding: 0 15px;
+
+    @media screen and (max-width: 979px) {
+      display: none;
+      position: relative;
+      top: 100%;
+      left: 0;
+      max-width: 100%;
+      margin-left: 0;
+      padding: 15px 15px 0;
+      z-index: 1;
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: var(--whiteTextColor);
+    overflow: hidden;
+    border-radius: 3px;
+
+    & button {
+      height: 100%;
+      width: 140px;
+      font-size: 16px;
+      color: var(--whiteTextColor);
+      border: none;
+      background-color: var(--primaryColor);
+      @include transition(all $transition linear);
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        background-color: rgba($primaryColor, 0.8);
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+    width: calc(100% - 140px);
+  }
+
+  &__input &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    color: var(--greyColor);
+  }
+
+  &__input input {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px 0 40px;
+    border: none;
+    background: transparent;
+  }
+}

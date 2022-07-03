@@ -1,0 +1,102 @@
+@import '~styles/partials/theme.scss';
+
+.callToAction {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
+    &__left {
+      flex: 1 1 60%;
+    }
+
+    &__right {
+      flex: 1 1 40%;
+      padding: 15px;
+      padding-left: 100px;
+
+      @media only screen and (max-width: 1199px) {
+        padding-left: 50px;
+      }
+
+      @media only screen and (max-width: 992px) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__figure {
+    max-width: 100%;
+    max-height: 100%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -40px;
+
+    @media only screen and (max-width: 992px) {
+      margin-top: 0px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 300;
+    margin: 0 auto;
+    color: var(--primaryTextColor);
+  }
+
+  &__button {
+    align-self: flex-start;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    color: var(--primaryTextColor);
+    padding-top: 30px;
+    @include transition(all $transition linear);
+
+    &:hover {
+      color: var(--secondaryColor);
+    }
+  }
+
+  &.reverse {
+    .callToAction {
+      &__wrapper {
+        flex-direction: row-reverse;
+
+        @media only screen and (max-width: 992px) {
+          flex-direction: column;
+        }
+
+        &__right {
+          flex: 1 1 40%;
+          padding: 15px;
+          padding-right: 100px;
+
+          @media only screen and (max-width: 1199px) {
+            padding-right: 50px;
+          }
+
+          @media only screen and (max-width: 992px) {
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

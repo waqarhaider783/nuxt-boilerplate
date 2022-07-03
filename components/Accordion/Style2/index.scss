@@ -1,0 +1,78 @@
+@import '~styles/partials/theme.scss';
+
+.accordion {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    background-color: var(--secondaryColor);
+    border: none;
+    border-radius: 10px;
+    color: var(--primaryColor);
+    cursor: pointer;
+    padding: 10px 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--primaryColor);
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    max-height: 500px;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--primaryColor);
+    @include transition(max-height $transition linear);
+
+    &--hide {
+      max-height: 0px;
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 10px;
+  }
+
+  ol > li:before {
+    content: counters(item, '.') '. ';
+    display: table-cell;
+    padding-right: 0.6em;
+  }
+
+  li ol > li {
+    margin: 0;
+    margin-bottom: 10px;
+
+    &:hover {
+      margin-bottom: 8.5px;
+      border-bottom: 1px solid var(--blackTextColor);
+      cursor: pointer;
+    }
+  }
+
+  li ol > li:before {
+    content: counters(item, '.') ' ';
+  }
+}

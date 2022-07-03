@@ -1,0 +1,11 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.game-heading {
+  &__title {
+    margin: 40px 0;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primaryTextColor);
+  }
+}

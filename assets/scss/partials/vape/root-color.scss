@@ -1,0 +1,24 @@
+/* ==============================
+    VAPE AND PODS TIPS ROOT COLORS STARTS.
+================================= */
+:root {
+  --primaryColor: #00a98e;
+  --secondaryColor: #c10000;
+  --tertiaryColor: #f6b700;
+  --darkBlack: #010101;
+  --greyColor: #868689;
+  --lightGreyColor: #e4e4e4;
+  --darkGreyColor: #172730;
+  --primaryTextColor: #1c1c1c;
+  --greyTextColor: #6d6e71;
+  --whiteTextColor: #ffffff;
+  --blackTextColor: #000000;
+  --borderColor: #d2d2d2;
+  --gp: 25px;
+}
+
+@media (min-width: 641px) {
+  :root {
+    --gp: 30px;
+  }
+}

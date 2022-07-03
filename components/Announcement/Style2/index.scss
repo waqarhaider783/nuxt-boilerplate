@@ -1,0 +1,37 @@
+@import '~assets/scss/partials/theme.scss';
+
+.announcement {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+
+  &--info {
+    color: darken($info, 20);
+    background: lighten($info, 30);
+  }
+
+  &--success {
+    color: darken($success, 20);
+    background: lighten($success, 30);
+  }
+
+  &--danger {
+    color: darken($danger, 20);
+    background: lighten($danger, 30);
+  }
+
+  &--warning {
+    color: darken($warning, 20);
+    background: lighten($warning, 30);
+  }
+
+  &__text {
+    display: inline-block;
+    color: inherit;
+    padding: 0 10px;
+  }
+}

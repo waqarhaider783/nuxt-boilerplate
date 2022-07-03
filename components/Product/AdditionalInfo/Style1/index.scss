@@ -1,0 +1,16 @@
+@import '~/assets/scss/partials/theme.scss';
+.additional-information {
+  background-color: var(--gray-200);
+  &__wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0.25fr 0.75fr;
+    margin: 0.5rem;
+    .name_attribute {
+      margin: 0.5rem 0;
+    }
+    .value_attribute {
+      margin: 0.5rem 0;
+    }
+  }
+}

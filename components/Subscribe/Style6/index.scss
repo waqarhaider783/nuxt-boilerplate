@@ -1,0 +1,94 @@
+@import '@/assets/scss/partials/theme.scss';
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  text-align: center;
+  padding: 50px;
+  line-height: 1.2;
+  background-color: var(--primaryColor);
+
+  @media (max-width: 480px) {
+    padding: 30px;
+  }
+
+  & > *:not(:last-child) {
+    padding: 15px 0;
+  }
+
+  &__heading,
+  &__text {
+    font-weight: bold;
+    color: var(--whiteTextColor);
+  }
+
+  &__heading {
+    font-size: 40px;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.emailInputBox {
+  display: flex;
+  width: 640px;
+  font-size: 15px;
+  padding-top: 15px;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+
+  &__input,
+  &__button {
+    appearance: none;
+    color: var(--secondaryColor);
+    margin: 0;
+    padding: 10px 12px;
+    border: 0;
+    font-size: inherit;
+  }
+
+  &__input {
+    flex: 1;
+    text-align: left;
+    background-color: var(--whiteTextColor);
+    border-radius: 10px 0 0 10px;
+  }
+
+  &__button {
+    min-width: 140px;
+    cursor: pointer;
+    color: var(--whiteTextColor);
+    text-align: center;
+    background-color: var(--secondaryColor);
+    border-radius: 0 10px 10px 0;
+
+    @media (max-width: 480px) {
+      min-width: auto;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      background-color: rgba($secondaryColor, 0.8);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+query MyQuery {
+  pages(where: {title: "about us"}) {
+    edges {
+      node {
+        aboutCardStyle1 {
+          title
+          cardDescription {
+            paragraphStyle1
+          }
+          image {
+            altText
+            sourceUrl
+          }
+        }
+        aboutContentStyle1 {
+          titleStyle1
+          descriptionStyle1 {
+            paragraphContentstyle1
+          }
+        }
+        aboutContentStyle2 {
+          titleStyle2
+          descriptionStyle2 {
+            paragraphStyle2
+          }
+        }
+        aboutContentStyle3 {
+          aboutUs {
+            description
+            heading
+            image {
+              altText
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

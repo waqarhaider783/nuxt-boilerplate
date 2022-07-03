@@ -1,0 +1,24 @@
+/**
+ 
+ * @author Ashish Ali <aashish.karowalia@va8ivedigital.com>
+ */
+
+@charset "utf-8";
+
+// Partials Starts
+//Styling using globaly in projects.
+//Settings Have Custom Variables, Icons Variable and mixins.
+@import 'theme';
+// HTML reset CSS.
+@import 'reset';
+// Custom Grid Functions.
+@import 'grid';
+// Default Styling.
+@import 'global';
+
+// // Header CSS wants to import globally
+// @import "../components/header";
+// // Footer CSS wants to import globally
+// @import "../components/footer";
+// // Popup CSS  wants to import globally
+// @import "../components/popup";

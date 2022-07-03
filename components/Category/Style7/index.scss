@@ -1,0 +1,51 @@
+@import '~assets/scss/partials/theme.scss';
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 3px 8px 0 rgba(65, 65, 65, 0.3);
+  @include transition(transform $transition ease);
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--greyTextColor);
+    text-transform: uppercase;
+    @include transition(color $transition ease);
+
+    &--hot {
+      color: var(--primaryColor);
+    }
+  }
+
+  &__image {
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--blackTextColor);
+    text-transform: capitalize;
+    @include transition(color $transition ease);
+  }
+
+  &:active &__title,
+  &:focus &__title,
+  &:hover &__title {
+    outline: none;
+    color: var(--primaryColor);
+  }
+}

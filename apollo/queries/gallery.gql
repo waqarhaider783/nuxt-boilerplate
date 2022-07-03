@@ -1,0 +1,14 @@
+query Gallery {
+  pages(where: { title: "Gallery" }) {
+    edges {
+      node {
+        galleryStyle1 {
+          title
+          galleryImages {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

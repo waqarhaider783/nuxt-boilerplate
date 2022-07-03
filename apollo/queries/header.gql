@@ -1,0 +1,14 @@
+query MyQuery {
+  pages(where: {title: "header"}) {
+    edges {
+      node {
+        headerStyle1 {
+          headerBgImg {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

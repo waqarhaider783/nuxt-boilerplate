@@ -1,0 +1,9 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.sidebarPanel {
+  background: var(--whiteTextColor);
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}

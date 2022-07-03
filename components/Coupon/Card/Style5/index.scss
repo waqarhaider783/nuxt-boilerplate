@@ -1,0 +1,145 @@
+@import '~assets/scss/partials/theme.scss';
+
+.couponCard {
+  padding: 45px 20px;
+  background-color: #e6e6e6;
+
+
+  &__collaterals {
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 10px;
+      width: 100%;
+      background-color: transparent;
+      background-size: 20px 20px;
+      background-position: 0 10px, 40px 40px;
+      background-image: radial-gradient(closest-side, transparent 9px, #e6e6e6 100%);
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      margin-bottom: -10px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: var(--blackTextColor);
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+
+  &__form {
+    &>*:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__btn {
+    &>a {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--whiteTextColor);
+      line-height: 20px;
+      background-color: var(--blackTextColor);
+      border-color: var(--blackTextColor);
+      border-radius: 3px;
+      text-align: center;
+      padding: 10px;
+      @include transition(all $transition linear);
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        background-color: var(--primaryColor);
+        border-color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+.glowInput {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--greyTextColor);
+  margin: 0;
+  padding: 10px 15px;
+  line-height: 2;
+  background-color: var(--borderColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 0;
+
+  /* Place Holder CSS */
+  &::-webkit-input-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:-moz-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &::-moz-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--greyTextColor);
+    opacity: .5;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  /* Place Holder CSS for Hover */
+  &:hover::-webkit-input-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover:-moz-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover::-moz-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:hover:-ms-input-placeholder {
+    opacity: 0.75;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  /* Place Holder CSS for Focus */
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    @include transition(opacity $transition-short ease-in-out);
+  }
+}

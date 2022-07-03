@@ -1,0 +1,30 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.wide-column {
+  padding: 0 15px;
+  flex: 1;
+  &.small {
+    width: 75%;
+  }
+  &.medium {
+    width: 70%;
+  }
+  &.large {
+    width: 66.66%;
+  }
+  &.half {
+    width: 50%;
+  }
+
+  @media (max-width: 1200px) {
+    &.small {
+      width: 100%;
+    }
+    &.medium {
+      width: 100%;
+    }
+    &.large {
+      width: 100%;
+    }
+  }
+}

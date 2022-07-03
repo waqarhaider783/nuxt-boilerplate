@@ -1,0 +1,69 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.searchC {
+  --spacing: 5px;
+  --border-radius: 45px;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background: var(--whiteTextColor);
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: var(--greyTextColor);
+    padding: 12px 20px;
+    padding-right: 48px;
+    border-radius: var(--border-radius);
+
+    @include placeholder {
+      font-size: inherit;
+      line-height: inherit;
+      color: var(--lightGreyColor);
+    }
+  }
+
+  &__icon {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: var(--spacing);
+    bottom: var(--spacing);
+    right: var(--spacing);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 38px;
+    background: var(--primaryColor);
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--whiteTextColor);
+    transition: background-color $transition linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+      background-color: darken($primaryColor, 15%);
+    }
+  }
+}

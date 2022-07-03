@@ -1,0 +1,73 @@
+@import '~assets/scss/partials/theme.scss';
+
+.cartCard {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+
+  &__image {
+    width: 72px;
+    height: 72px;
+    position: relative;
+
+    &>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+  }
+
+  &__details {
+    flex: 1 1 auto;
+    padding: 0 5px;
+  }
+
+  &__title {
+    &>a {
+      font-size: 16px;
+      color: var(--blackTextColor);
+      padding: 5px 0;
+      @include transition(color $transition linear);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--primaryColor);
+      }
+    }
+  }
+
+  &__price {
+    font-size: 12px;
+    color: var(--lightGreyColor);
+    padding: 5px 0;
+
+    &--primary {
+      color: var(--primaryColor);
+    }
+  }
+
+  &__delete {
+    &__icon {
+      cursor: pointer;
+      color: var(--lightGreyColor);
+      padding: 0 5px;
+      @include transition(color $transition linear);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--primaryColor);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+query getProducts {
+  products {
+    edges {
+      node {
+        ... on SimpleProduct {
+          slug
+          averageRating
+          description
+          image {
+            sourceUrl
+            altText
+          }
+          price
+          regularPrice
+          salePrice
+        }
+        ... on GroupProduct {
+          averageRating
+          slug
+          description
+          image {
+            sourceUrl
+            altText
+          }
+          id
+          name
+          price
+        }
+        ... on ExternalProduct {
+          averageRating
+          slug
+          description
+          image {
+            sourceUrl
+            altText
+          }
+          id
+          name
+          price
+          regularPrice
+          salePrice
+        }
+        ... on VariableProduct {
+          averageRating
+          slug
+          description
+          image {
+            sourceUrl
+            altText
+          }
+          id
+          name
+          price
+          regularPrice
+          salePrice
+        }
+      }
+    }
+  }
+}

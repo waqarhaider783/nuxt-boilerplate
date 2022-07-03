@@ -1,0 +1,17 @@
+query MyQuery {
+  pages(where: { name: "footer" }) {
+    edges {
+      node {
+        footerStyle6 {
+          copyrightStyle6
+          descriptionStyle6
+          imageStyle6 {
+            id
+            sourceUrl
+            altText
+          }
+        }
+      }
+    }
+  }
+}

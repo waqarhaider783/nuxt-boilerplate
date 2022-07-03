@@ -1,0 +1,24 @@
+@import '../../../assets/scss/partials/theme.scss';
+
+.swiper {
+  height: auto;
+  width: 100%;
+  padding: 50px 20px;
+  padding-right: 50px;
+  background: transparent;
+  &.bg {
+    background: var(--primaryColor);
+    background: linear-gradient(
+      to right,
+      $primaryColor,
+      $tertiaryColor,
+      $secondaryColor
+    );
+  }
+  &__slide {
+    padding-left: 30px;
+  }
+  @media (max-width: 1199px) {
+    padding: 20px;
+  }
+}

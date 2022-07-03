@@ -1,0 +1,33 @@
+query MyQuery {
+  posts {
+    edges {
+      node {
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        date
+        title
+        author {
+          node {
+            name
+          }
+        }
+        categories {
+          edges {
+            node {
+              name
+              categoryImage {
+                catImage {
+                  sourceUrl
+                  altText
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

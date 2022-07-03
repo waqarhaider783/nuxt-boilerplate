@@ -1,0 +1,36 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle2 {
+          reviewBoxCardStyle2 {
+            buttonLinkCardStyle2
+            buttonTextCardStyle2
+            discountPriceCardStyle2
+            ratingNumberCardStyle2
+            ratingStarCardStyle2
+            subTitleCardStyle2
+            titleCardStyle2
+            tooltipCardStyle2
+            listCardStyle2 {
+              fieldGroupName
+              itemCardStyle2
+            }
+            reviewImageCardStyle2 {
+              sourceUrl
+              altText
+            }
+            productImageCardStyle2 {
+              sourceUrl
+              altText
+            }
+            brandLogoCardStyle2 {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+}

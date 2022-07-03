@@ -1,0 +1,45 @@
+@import '~styles/partials/theme.scss';
+
+.brand-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px 20px;
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-alphabet {
+    display: block;
+
+    .brand-title {
+      margin: 0;
+      padding: 10px 20px !important;
+      background: var(--blackTextColor);
+      color: var(--whiteTextColor);
+      font-size: 1.2rem;
+      line-height: 1em;
+    }
+
+    .entry-content {
+      padding-left: 1.3em;
+
+      li {
+        display: block;
+        list-style: none;
+        font-size: 1rem;
+        line-height: 1em;
+        margin: 1.5em 0;
+        padding: 0;
+
+        .brand_link {
+          color: var(--blackTextColor);
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

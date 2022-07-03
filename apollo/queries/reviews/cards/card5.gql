@@ -1,0 +1,29 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle5 {
+          reviewBoxCardStyle5 {
+            buttonLinkCardStyle5
+            buttonTextCardStyle5
+            listBoxCardStyle5 {
+              headingCardStyle5
+              listItemsCardStyle5 {
+                itemsCardStyle5
+              }
+            }
+            imageCardStyle5 {
+              id
+              sourceUrl
+              altText
+            }
+            ratingCardStyle5
+            regularPriceCardStyle5
+            sellPriceCardStyle5
+            starsCardStyle5
+          }
+        }
+      }
+    }
+  }
+}

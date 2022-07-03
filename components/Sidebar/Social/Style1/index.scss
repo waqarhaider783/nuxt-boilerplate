@@ -1,0 +1,53 @@
+@import '~styles/partials/theme.scss';
+
+.socialSec {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 34px;
+
+    width: 32px;
+    height: 32px;
+    color: var(--whiteTextColor);
+    background-color: var(--primaryColor);
+    text-align: center;
+    margin: 0 8px;
+    @include transition(
+      color $transition linear,
+      background-color $transition linear
+    );
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      background-color: var(--blackTextColor) !important;
+    }
+
+    &--circle {
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    &--thin {
+      font-size: 32px;
+      line-height: 1;
+      color: var(--primaryColor);
+      background-color: transparent !important;
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+        color: var(--blackTextColor);
+        background-color: transparent !important;
+      }
+    }
+  }
+}

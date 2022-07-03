@@ -1,0 +1,214 @@
+@import '~assets/scss/partials/theme.scss';
+
+.auth-wrp {
+  display: flex;
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--whiteTextColor);
+  max-width: 1215px;
+  margin: auto;
+  height: 95vh;
+  min-width: 60vw;
+  .left,
+  .right {
+    width: 50%;
+  }
+  .main-wrp {
+    z-index: 1;
+  }
+}
+
+.right {
+  background: var(--whiteTextColor);
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  &_inner {
+    height: fit-content;
+    margin: auto;
+    max-width: 320px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    color: var(--blackTextColor);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--greyTextColor);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+  .close {
+    color: var(--gray-500);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .input-wrp {
+    .title {
+      font-size: 1rem;
+      text-transform: capitalize;
+      color: var(--blackTextColor);
+      line-height: 1.5em;
+      margin: 0.8rem 0;
+
+      width: fit-content;
+      &:not(.opt)::before {
+        content: '*';
+        color: var(--secondaryColor);
+        margin-right: 4px;
+      }
+      // &::after {
+      //   content: url('~/assets/images/svgs/info.svg');
+      //   font-size: 10px;
+      //   height: 10px;
+      //   width: 10px;
+      // }
+    }
+    input,
+    select,
+    textarea {
+      padding: 14px 1rem;
+      background: var(--whiteTextColor);
+      outline: none;
+      border: 1px solid var(--greyTextColor);
+      border-radius: 10px;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.5em;
+      color: var(--blackTextColor);
+      @include remove-arrows;
+      // -webkit-appearance: none;
+      &:hover,
+      &:active,
+      &:focus {
+        border: 1px solid var(--primaryColor);
+      }
+      &::placeholder {
+        color: var(--greyTextColor);
+      }
+    }
+  }
+  .rights {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--gray-500);
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+  }
+  .signup {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: var(--blackTextColor);
+    margin: 1rem auto;
+    a {
+      color: var(--primaryColor);
+      font-weight: 500;
+    }
+  }
+  .image {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 50px;
+    height: 110px;
+    width: 110px;
+    margin: auto;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .left {
+    .logo {
+      width: 140px;
+    }
+    .main-wrp {
+      .heading {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .auth-wrp {
+    padding: 10px;
+  }
+  .right {
+    .rights,
+    .signup {
+      font-size: 0.85rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .auth-wrp {
+    flex-direction: column;
+    padding: 0;
+    height: fit-content;
+    .left,
+    .right {
+      width: 100%;
+    }
+    .left {
+      border-radius: 20px 20px 0 0;
+      .color-layer {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+    .right {
+      border-radius: 0 0 20px 20px;
+      height: fit-content;
+      width: 90%;
+      &_inner {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .title {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      .subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .close {
+        display: none;
+      }
+      .rights,
+      .login {
+        font-size: 0.75rem;
+      }
+      .rights {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .otp-wrp {
+    input {
+      font-size: 1.3rem !important;
+    }
+  }
+}

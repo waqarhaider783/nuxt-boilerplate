@@ -1,0 +1,30 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.sidebar-panel-style2 {
+  background: var(--whiteTextColor);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px 1px rgb(0 0 0 / 10%);
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    position: relative;
+    padding: 0 0 0 0;
+    margin-bottom: 30px;
+  }
+
+  // large devices (desktops, 1440px and Down)
+  @media (max-width: 1440px) {
+    .title {
+      font-size: 17px;
+    }
+  }
+}

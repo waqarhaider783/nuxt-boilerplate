@@ -1,0 +1,18 @@
+query MyQuery {
+  pages(where: { title: "USP Card" }) {
+    edges {
+      node {
+        uspCardStyle1 {
+          cardColumn {
+            description
+            image {
+              sourceUrl
+              altText
+            }
+            title
+          }
+        }
+      }
+    }
+  }
+}

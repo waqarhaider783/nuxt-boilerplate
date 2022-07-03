@@ -1,0 +1,81 @@
+@import '~assets/scss/partials/theme.scss';
+.review {
+  background: $gray-200;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px;
+  .title {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  ul {
+    margin-top: 30px;
+    li {
+      font-size: 18px;
+      line-height: 1.5em;
+      color: $gray-600;
+      margin-bottom: 30px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .false,
+      .true {
+        background: #f22929;
+        color: white;
+        font-weight: 500;
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        align-items: center;
+      }
+      .unlimited {
+        color: #1cdc6f;
+      }
+      .annual,
+      .monthly,
+      .unlimited {
+        font-size: 14px;
+        line-height: 1.5em;
+      }
+      .monthly {
+        color: #f22929;
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    padding: 25px;
+    ul {
+      li {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 20px;
+    .subtitle {
+      font-size: 16px;
+    }
+    ul {
+      margin-top: 10px;
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    min-width: 302px;
+    margin: 5px 0;
+    margin-right: 10px;
+  }
+}

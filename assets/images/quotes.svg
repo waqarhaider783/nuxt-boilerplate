@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="296" height="391" viewBox="0 0 296 391">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_92" data-name="Rectangle 92" width="296" height="391" rx="50" transform="translate(0 0)" fill="#fff" opacity="0.39"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Icon_awesome-quote-left" data-name="Icon awesome-quote-left" d="M262.7,138.475H217.4V99.553c0-21.467,16.249-38.921,36.234-38.921h4.529c7.53,0,13.588-6.507,13.588-14.6V16.845c0-8.088-6.058-14.6-13.588-14.6h-4.529c-50.048,0-90.585,43.543-90.585,97.3V245.508c0,16.116,12.172,29.191,27.175,29.191H262.7c15,0,27.175-13.075,27.175-29.191V167.665C289.872,151.55,277.7,138.475,262.7,138.475Zm-163.053,0H54.351V99.553c0-21.467,16.249-38.921,36.234-38.921h4.529c7.53,0,13.588-6.507,13.588-14.6V16.845c0-8.088-6.058-14.6-13.588-14.6H90.585C40.537,2.25,0,45.793,0,99.553V245.508C0,261.624,12.172,274.7,27.175,274.7H99.643c15,0,27.175-13.075,27.175-29.191V167.665C126.819,151.55,114.647,138.475,99.643,138.475Z" transform="translate(-17.004 163.433)" fill="#e8e8e8"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+query Sliders {
+  pages(where: { title: "slider" }) {
+    edges {
+      node {
+        sliderStyle1 {
+          slide {
+            caption
+            count
+            title
+            image {
+              sourceUrl
+              altText
+            }
+          }
+        }
+        sliderStyle2 {
+          slideStyle2 {
+            imageStyle {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+}

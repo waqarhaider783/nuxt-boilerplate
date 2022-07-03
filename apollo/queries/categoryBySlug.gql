@@ -1,0 +1,7 @@
+query MyQuery($slug: String!) {
+  v8CategoryBy(slug: $slug) {
+    categoryDetails {
+      products
+    }
+  }
+}

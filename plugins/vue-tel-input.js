@@ -1,0 +1,8 @@
+// import Vue from 'vue'
+// import VueTelInput from 'vue-tel-input'
+// import 'vue-tel-input/dist/vue-tel-input.css'
+
+// Vue.use(VueTelInput, {
+//   //   showFlags: false,
+//   dropdownOptions: { showFlags: false, showDialCodeInSelection: true },
+// })

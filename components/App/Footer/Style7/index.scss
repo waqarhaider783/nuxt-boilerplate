@@ -1,0 +1,203 @@
+@import '~/assets/scss/partials/theme.scss';
+
+.footer {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    border-top: 1px solid var(--primaryTextColor);
+
+    @media only screen and (max-width: 980px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+
+    @media only screen and (max-width: 980px) {
+      max-width: unset;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: unset;
+      }
+
+      & > p {
+        flex: 1;
+        max-width: 50%;
+        padding-right: 30px;
+        @include trim(4);
+
+        @media only screen and (max-width: 1200px) {
+          flex: unset;
+          max-width: unset;
+          padding-right: unset;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__input {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+
+    @media only screen and (max-width: 1200px) {
+      flex: unset;
+      max-width: unset;
+    }
+
+    & > input {
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
+      font-size: 18px;
+      line-height: 1.4em;
+      color: var(--greyTextColor);
+      padding: 12px;
+      padding-right: 40px;
+      border-radius: 6px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+
+      @include placeholder {
+        font-size: inherit;
+        line-height: inherit;
+        color: var(--lightGreyColor);
+      }
+    }
+
+    button {
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      bottom: 12px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: var(--greyColor);
+      @include transition(color $transition linear);
+
+      &:active &:focus,
+      &:hover {
+        outline: none;
+        cursor: pointer;
+        color: var(--primaryColor);
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 980px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__text,
+  &__link {
+    font-size: 18px;
+    line-height: 1.4em;
+    color: var(--greyTextColor);
+
+    @media only screen and (max-width: 980px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+    @include transition(color $transition linear);
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+      color: darken($greyTextColor, 15%);
+    }
+  }
+
+  &__right {
+    flex: 1;
+    max-width: 50%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 980px) {
+      max-width: unset;
+      justify-content: unset;
+      padding-top: 20px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media only screen and (max-width: 380px) {
+      gap: 20px;
+    }
+
+    & > *:not(:last-child) {
+      padding-right: 100px;
+
+      @media only screen and (max-width: 1440px) {
+        padding-right: 75px;
+      }
+
+      @media only screen and (max-width: 1366px) {
+        padding-right: 50px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        padding-right: 35px;
+      }
+    }
+  }
+}

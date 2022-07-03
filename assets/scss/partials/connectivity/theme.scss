@@ -1,0 +1,110 @@
+/* =======
+   ICONS 
+   ======= */
+@import '../../icons/variables';
+// -----------------------------------------/
+
+/* =======
+   MIXINS 
+   ======= */
+@import '../_mixins';
+// -----------------------------------------/
+
+//using these variables only for builten function of scss eg: lighten,darken,rgba in colors,
+
+/* =======
+   VAPE AND PODS Tips Color 
+   ======= */
+$primaryColor: #2b4edd;
+$secondaryColor: #1a2531;
+$tertiaryColor: #dd7a2f;
+$darkBlack: #010101;
+
+/* ================================
+      Social Media Theme Color
+=================================== */
+$socialMediaThemeColor: (
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  instagram: #dd2a7b,
+  linkedin: #0274b3,
+  google-plus: #dd4d40,
+  pinterest: #e56262,
+  youtube: #d8362a,
+);
+
+@function socialColor($color-name) {
+  @return map-get($socialMediaThemeColor, $color-name);
+}
+// -----------------------------------------/
+
+/* ===============
+   Default Setting 
+   =============== */
+$body: (
+  background: var(--whiteTextColor),
+  color: var(--blackTextColor),
+  line-height: 1,
+);
+$font-family: 'Sofiapro';
+$font-size: 14px;
+$font-weights: (
+  light: 300,
+  medium: 500,
+  bold: 700,
+  black: 800,
+);
+$font-family-pathname: to-lower-case($font-family);
+$border-radius: 5px;
+$total-grids: 12;
+
+@function body($body-key) {
+  @return map-get($body, $body-key);
+}
+
+@function weights($font-weight) {
+  @return map-get($font-weights, $font-weight);
+}
+
+/* ================================================================
+      Global Class which are extended in projects
+=================================================================== */
+
+%buttons {
+  display: block;
+  text-align: center;
+  min-height: 45px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  min-width: 220px;
+  text-transform: uppercase;
+  padding: 12px 40px;
+  cursor: pointer;
+  border: 0;
+  color: var(--whiteTextColor);
+  background-color: var(--primaryColor);
+  @include transition(all $transition linear);
+  @include border-radius();
+
+  &:hover {
+    background-color: var(--secondaryColor);
+  }
+}
+
+%perfectCenter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  /* define height */
+}
+
+%verticalCenter {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+  /* define height */
+}

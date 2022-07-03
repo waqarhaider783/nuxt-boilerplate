@@ -1,0 +1,60 @@
+@import '~/assets/scss/partials/theme.scss';
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #000000da;
+  z-index: 20;
+}
+.modal-wrapper {
+  position: relative;
+  margin: auto;
+}
+.modal {
+  text-align: center;
+  background-color: white;
+  // padding: 35px 0;
+  padding-top: 0;
+  border-radius: 20px;
+}
+.header {
+  position: relative;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-400);
+  padding: 35px 0;
+  &.hidden {
+    display: none;
+  }
+  .title {
+    margin: auto;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--blackTextColor);
+    text-transform: capitalize;
+  }
+}
+.close {
+  cursor: pointer;
+  color: var(--gray-600);
+  font-size: 1.6rem;
+  position: absolute;
+  margin: auto 0;
+  right: 30px;
+  top: 30px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .close {
+    color: var(--whiteTextColor);
+    font-size: 1.2rem;
+    right: 1.2rem;
+    top: 1.2rem;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  reviews {
+    edges {
+      node {
+        reviewCardStyle11 {
+          reviewBoxCardStyle11 {
+            descriptionCardStyle11
+            productTitleCardStyle11
+            listItemOneCardStyle11 {
+              fieldGroupName
+              itemOneCardStyle11
+              statusOneCardStyle11
+            }
+            listItemTwoCardStyle11 {
+              fieldGroupName
+              itemTwoCardStyle11
+              statusTwoCardStyle11
+            }
+            listItemThreeCardStyle11 {
+              fieldGroupName
+              itemThreeCardStyle11
+              statusThreeCardStyle11
+            }
+            listItemFourCardStyle11 {
+              fieldGroupName
+              itemFourCardStyle11
+              statusFourCardStyle11
+            }
+          }
+        }
+      }
+    }
+  }
+}
